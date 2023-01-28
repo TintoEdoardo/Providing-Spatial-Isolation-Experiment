@@ -6,4 +6,10 @@ REQUIREMENTS and NOTES:
 5. Python3 has been used, with the following dependencies: shutil, os, serial, re, matplotlib.pyplot. 
 
 INSTRUCTIONS: 
-1. Execute the python script. 
+1. Plug in the development unit. 
+2. Execute the python script. 
+3. Wait until the script terminates, at the end, the result graphs will be available inside a directory named Graphs. 
+
+DEVELOPMENT ENVIRONMENT: 
+- Ubuntu 22.04.1 LTS
+- Python 3.10.6
