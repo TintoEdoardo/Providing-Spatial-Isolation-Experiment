@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 """
     WORKING DIRECTORY ORGANIZATION:
-        Providing-Spatial-Isolation
+        Providing-Spatial-Isolation-Experiment
         |- Providing-Spatial-Isolation-Experiment
         |- Experiments
         |  |- Experiment_1
