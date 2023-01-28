@@ -1,0 +1,115 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U channel_pool%b	channel_pool.adb	57b07373 NE OO PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+
+U channel_pool%s	channel_pool.ads	812d50f0 EB EE OO PF PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-finali.ads		20180525200321 bf4f806b ada.finalization%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D channel_pool.ads	20221030133516 1d8f4e36 channel_pool%s
+D channel_pool.adb	20221027071553 c932eb3c channel_pool%b
+D system.ads		20220730104119 da70b04d system%s
+D s-finroo.ads		20180525200321 4ff27390 system.finalization_root%s
+D s-memory.ads		20180525200321 597d6634 system.memory%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20180525200321 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20180525200321 b16154c2 system.storage_pools%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+X 3 a-finali.ads
+53U14*Initialize<10|44p14>
+54U14*Finalize<10|43p14>
+X 7 channel_pool.ads
+14K9*Channel_Pool 49l5 49e17 8|14b14 135l5 135t17
+28R9*Channel_Bounded_Pool<16|42R9> 3|53P14 54P14 7|29d7 31e65 33P24 34r14
+. 37P25 38r29 43P25 44r29 8|23r29 85r29 122r15 10|42p14
+29i7*Pool_Size{14|62I12}
+33V24*Storage_Size{14|62I12}<16|60p13> 34>7 8|121b24 133l8 133t20
+34r7 Pool{28R9} 8|122b7 125r29
+37U25*Allocate<16|46p14> 38=7 39<7 40>7 41>7 8|22b25 78l8 78t16
+38r7 Pool{28R9} 8|23b7 29r29
+39m7 Address{9|75M9} 8|24b7 73m10 76m10
+40i7 Storage_Size{14|62I12} 8|25b7 31r42
+41i7 Alignment{14|62I12} 8|26b7 36r10 37r41 53r10 58r55 59r62
+43U25*Deallocate<16|53p14> 44=7 45>7 46>7 47>7 8|84b25 115l8 115t18
+44r7 Pool{28R9} 8|85b7 91r29
+45m7 Address{9|75M9} 8|86b7 107r15 113r23
+46i7 Storage_Size{14|62I12} 8|87b7 92r29
+47i7 Alignment{14|62I12} 8|88b7 99r10
+X 8 channel_pool.adb
+16K12 SSE=16:31 28r11 87r22 88r22 123r15 132r14
+31i7 Aligned_Size{14|62I12} 37m10 37r26 40r63
+32m7 Aligned_Address{9|75M9} 57m10 67r16 73r21
+33m7 Allocated{9|75M9} 40m7 46r10 58r25 59r30 70r30 76r21
+64m13 Saved_Address{9|75M9} 65m33 65r33 66m17 66r17 70m13
+104m13 Saved_Address{9|75M9} 105m33 105r33 106m17 106r17 109r26
+X 9 system.ads
+45K9*System 7|11r6 12r6 29r20 31r10 35r14 39r26 40r22 41r22 45r22 46r22 47r22
+. 8|11r6 12w6 12r18 16r24 24r26 25r22 26r22 32r25 33r25 40r20 40r41 64r29
+. 68r34 86r22 90r11 104r29 107r41 9|168e11
+75M9*Address 7|39r33 45r29 8|24r33 32r32 33r32 64r36 68r41 86r29 104r36 107r48
+77m4*Null_Address{75M9} 8|46r22
+79N4*Storage_Unit 8|68r56 107r63
+89V14*"="{boolean} 8|46r20
+X 10 s-finroo.ads
+42U14*Adjust
+X 11 s-memory.ads
+45K16*Memory 8|11w13 40r27 40r48 109r13 113r10 11|107e18
+48M9*size_t 8|40r55
+53V13*Alloc{9|75M9} 8|40s34 11|103i<c,__gnat_malloc>22
+68U14*Free 8|109s20 113s17 11|104i<c,__gnat_free>22
+76V13*Realloc{9|75M9} 105i<c,__gnat_realloc>22
+X 14 s-stoele.ads
+42K16*Storage_Elements 7|12w13 29r27 35r21 40r29 41r29 46r29 47r29 8|16r31
+. 25r29 26r29 90r18 14|117e28
+54I9*Storage_Offset<integer> 8|68r18 107r25
+62I12*Storage_Count{54I9} 7|29r44 35r38 40r46 41r46 46r46 47r46 8|25r46 26r46
+. 31r25 87r26 88r26 123r19 132r18
+86V14*"-"{9|75M9} 8|68s16 107s23
+105M9*Integer_Address 8|58r38 59r45
+107V13*To_Address{9|75M9} 8|57s29
+112V13*To_Integer{105M9} 8|58s13 59s18
+X 16 s-stopoo.ads
+39K16*Storage_Pools 7|11w13 31r17 16|100e25
+42H9*Root_Storage_Pool<3|50R9> 7|31r31 16|67e62
+

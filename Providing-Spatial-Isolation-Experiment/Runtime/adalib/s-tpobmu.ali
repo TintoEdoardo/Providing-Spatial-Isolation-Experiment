@@ -1,0 +1,216 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U system.tasking.protected_objects.multiprocessors%b  s-tpobmu.adb  42292d97 OL PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.board_support%s  s-bbbosu.adb	s-bbbosu.ali
+W system.bb.cpu_primitives%s  s-bbcppr.adb	s-bbcppr.ali
+W system.bb.protection%s  s-bbprot.adb		s-bbprot.ali
+W system.bb.threads%s	s-bbthre.adb		s-bbthre.ali
+W system.bb.threads.queues%s  s-bbthqu.adb	s-bbthqu.ali
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+W system.multiprocessors.fair_locks%s  s-mufalo.adb  s-mufalo.ali
+W system.multiprocessors.spin_locks%s  s-musplo.adb  s-musplo.ali
+W system.os_interface%s	s-osinte.ads		s-osinte.ali
+W system.task_primitives%s  s-taspri.ads	s-taspri.ali
+W system.task_primitives.operations%s  s-taprop.adb  s-taprop.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U system.tasking.protected_objects.multiprocessors%s  s-tpobmu.ads  0b85b675 EE NE OL PK
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-charac.ads		20180525200321 2d3ec45b ada.characters%s
+D a-chlat1.ads		20180525200321 66457d31 ada.characters.latin_1%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-finali.ads		20180525200321 bf4f806b ada.finalization%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-string.ads		20180525200321 90ac6797 ada.strings%s
+D a-strmap.ads		20180525200321 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20180525200321 fe8d9a91 ada.strings.unbounded%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-textio.ads		20180525200321 ffc84532 ada.text_io%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D core_execution_modes.ads  20220730104119 71dc5744 core_execution_modes%s
+D cpu_budget_monitor.ads  20220730104119 ef87d174 cpu_budget_monitor%s
+D experiment_info.ads	20220730104119 528df8db experiment_info%s
+D initial_delay.ads	20220730104119 c784d3bd initial_delay%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D real_time_no_elab.ads	20220730104119 4b470d91 real_time_no_elab%s
+D real_time_no_elab-timing_events_no_elab.ads  20220730104119 ccf2094b real_time_no_elab.timing_events_no_elab%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbbosu.adb		20220730104119 f9473d13 system.bb.board_support%b
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bbcppr.adb		20220730104119 8f3f9fd0 system.bb.cpu_primitives%b
+D s-bcprmu.ads		20180525200322 26f8acf6 system.bb.cpu_primitives.multiprocessors%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbexti.ads		20220730104119 e4538a92 system.bb.execution_time%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbprot.ads		20180525200322 f48a7e85 system.bb.protection%s
+D s-bbprot.adb		20220730104119 6c0dfd91 system.bb.protection%b
+D s-bbthre.ads		20220730104119 eed1e84f system.bb.threads%s
+D s-bbthre.adb		20220730104119 7b779390 system.bb.threads%b
+D s-bbthqu.ads		20220730104119 98733e50 system.bb.threads.queues%s
+D s-bbthqu.adb		20220730104119 3c9c1e31 system.bb.threads.queues%b
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-bbtime.adb		20220730104119 551c47d4 system.bb.time%b
+D s-bbtiev.ads		20180525200322 f167837c system.bb.timing_events%s
+D s-finmas.ads		20180525200321 7811a767 system.finalization_masters%s
+D s-finroo.ads		20180525200321 4ff27390 system.finalization_root%s
+D s-imgboo.ads		20180525200321 f5d971eb system.img_bool%s
+D s-imgint.ads		20180525200322 02dbe0c2 system.img_int%s
+D s-imglld.ads		20180525200321 f3220969 system.img_lld%s
+D s-io.ads		20180525200321 9e42f74f system.io%s
+D s-maccod.ads		20180525200321 6d68a701 system.machine_code%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-mufalo.adb		20220730104119 50f34f31 system.multiprocessors.fair_locks%b
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-musplo.adb		20180525200322 3686343a system.multiprocessors.spin_locks%b
+D s-osinte.ads		20220730104119 55f7991a system.os_interface%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20180525200321 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20180525200321 b16154c2 system.storage_pools%s
+D s-stposu.ads		20180525200321 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20180525200321 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20180525200322 801abd01 system.task_info%s
+D s-taspri.ads		20180525200322 351848fa system.task_primitives%s
+D s-taprop.ads		20220730104119 287989f9 system.task_primitives.operations%s
+D s-taprop.adb		20220730104119 56bc35d5 system.task_primitives.operations%b
+D s-taskin.ads		20220730104119 58b15916 system.tasking%s
+D s-tasdeb.ads		20180525200322 b275d76a system.tasking.debug%s
+D s-tasdeb.adb		20180525200322 16d62b3b system.tasking.debug%b
+D s-taprob.ads		20180525200322 c8fc0753 system.tasking.protected_objects%s
+D s-tpobmu.ads		20180525200322 c379b126 system.tasking.protected_objects.multiprocessors%s
+D s-tpobmu.adb		20180525200322 daacac27 system.tasking.protected_objects.multiprocessors%b
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+X 21 system.ads
+45K9*System 168e11 71|32r9 43r5 72|33r6 35r6 36r6 37r6 38r6 40r6 41r6 42r6
+. 43r6 45r14 47r8 48r8 49r8 51r25 84r7 100r10 106r10 107r13 113r10 117r9
+. 121r10 153r4 156r5
+118I12*Any_Priority{integer}
+120I12*Interrupt_Priority{118I12} 72|101r9
+X 22 s-bb.ads
+40K16*BB 95e14 72|40r13 41r13 42r13 43r13 84r14 100r17 106r17 107r20 113r17
+. 121r17 131r23 153r11
+X 23 s-bbbosu.ads
+47K19*Board_Support 145e28 72|42w16 121r20 131r26
+126K12*Multiprocessors 144e23 72|121r34 131r40
+135V16*Current_CPU{49|23I12} 72|131s56
+139U17*Poke_CPU 72|121s50
+X 24 s-bbbosu.adb
+51U14 Initialize_CPU_Devices 52i<c,__gnat_initialize_cpu_devices>22
+X 25 s-bbcppr.ads
+46K19*CPU_Primitives 96e29 72|41w16 84r17 106r20 113r20
+85U14*Disable_Interrupts 72|84s32
+89U14*Enable_Interrupts 72|106s35 113s35
+X 26 s-bbcppr.adb
+81U14 Undef_Handler 83i24
+85U14 Dabt_Handler 87i24
+98U14 FIQ_Handler 100i24
+102U14 IRQ_Handler 104i24
+X 27 s-bcprmu.ads
+37U14*Start_All_CPUs 38i<c,__gnat_start_slave_cpus>22
+X 33 s-bbprot.ads
+42K19*Protection 58e25 72|40w16 153m14
+45p4*Wakeup_Served_Entry_Callback 72|153m25
+X 35 s-bbthre.ads
+50K19*Threads 475e22 72|43r16 100r20 107r23
+67P9*Thread_Id(64R9)
+144i7*Active_Priority{integer} 72|100r50 107r53
+X 37 s-bbthqu.ads
+43K27*Queues 514e29 72|43w24 100r28 107r31
+304V13*Running_Thread{35|67P9} 72|100s35 107s38
+X 49 s-multip.ads
+18K16*Multiprocessors 31e27 72|35w13 36r13 37r13 47r15 48r15 49r15
+21I9*CPU_Range<short_short_integer>
+23I12*CPU{21I9} 72|58r31 71r29 130r29
+X 50 s-mufalo.ads
+31K32*Fair_Locks 72e38 72|36w29 49r31
+42A9*Spinning_Array(boolean)<49|21I9>
+45R9*Fair_Lock 48e14 72|55r14
+46a7*Spinning{42A9} 72|61m39
+47r7*Lock{52|41R9} 72|62m39
+55U14*Lock 72|86s7 137s7
+68U14*Unlock 72|93s7 142s7
+X 52 s-musplo.ads
+29K32*Spin_Locks 63e38 72|37w29 48r31
+36M9*Atomic_Flag
+39m4*Unlocked{36M9} 72|62r62
+42m7*Flag{36M9} 72|62m52
+X 54 s-osinte.ads
+51K16*OS_Interface 256e24 72|38w13 117r16
+216V13*Current_Priority=218:39{integer} 72|117s29
+X 56 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 64 s-taspri.ads
+40K16*Task_Primitives 82e27 72|33r13 51r32
+X 65 s-taprop.ads
+46K32*Operations 167e38 72|33w29 51r48
+84V13*Get_Priority{67|250I12} 72|116s15
+90V13*Get_CPU{49|23I12} 72|71s45
+126U14*Wakeup 72|147s15
+X 66 s-taprop.adb
+74U14 Initialize_Slave 75i24
+X 67 s-taskin.ads
+58K16*Tasking 21|45k9 67|462e19 71|32r16 43r12 72|45r21 156r12
+67P9*Task_Id(65R9) 72|70r29
+114n7*Entry_Caller_Sleep{90E9} 72|147r40
+196P9*Entry_Call_Link(194R9) 71|34r35 72|54r14 69r35 132r20
+210p7*Self{67P9} 72|70r51 116r40 147r34
+220p7*Next{196P9} 72|90m18 148r35
+250I12*Extended_Priority{integer}
+407V13*Get_Sec_Stack{56|46P9} 408i<c,__gnat_get_secondary_stack>22
+X 70 s-taprob.ads
+52K24*Protected_Objects 67|58k16 70|225e37 71|32r24 43r20 72|45r29 156r20
+X 71 s-tpobmu.ads
+32K42*Multiprocessors 70|52k24 71|43l38 43e53 72|45b47 156l38 156t53
+34U14*Served 34>22 72|69b14 123l8 123t14
+34p22 Entry_Call{67|196P9} 72|69b22 70r40 90r7 91r46 116r29
+39U14*Wakeup_Served_Entry 72|129b14 150l8 150t27 154r6
+X 72 s-tpobmu.adb
+51K12 STPO=51:48 71r40 116r10 147r10
+53R9 Entry_Call_List 56e14 58r39
+54p7*List{67|196P9} 60m30 90r57 91m38 139r48 140m34
+55r7*Lock{50|45R9} 61m30 86m44 93m46 137m40 142m42
+58a4 Served_Entry_Call(53R9) 86m13 86r13 90r26 91m7 93m15 93r15 137m13 137r13
+. 139r21 140m7 142m15 142r15
+70p7 Caller{67|67P9} 71r54
+71i7 Caller_CPU{49|23I12} 86r32 90r45 91r26 93r34 117r47 121r60
+130i7 CPU_Id{49|23I12} 137r32 139r40 140r26 142r34
+132p7 Entry_Call{67|196P9} 139m7 144r13 147r23 148m10 148r24
+

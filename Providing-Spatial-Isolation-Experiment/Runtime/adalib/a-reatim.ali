@@ -1,0 +1,308 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_LONG_LONG_INTEGERS
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U ada.real_time%b	a-reatim.adb		cb52711d OL PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+W system.task_primitives%s  s-taspri.ads	s-taspri.ali
+W system.task_primitives.operations%s  s-taprop.adb  s-taprop.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+
+U ada.real_time%s	a-reatim.ads		6f9993b5 BN EE NE OL PK
+W ada%s			ada.ads			ada.ali
+W system%s		system.ads		system.ali
+W system.os_interface%s	s-osinte.ads		s-osinte.ali  EA
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-charac.ads		20180525200321 2d3ec45b ada.characters%s
+D a-chlat1.ads		20180525200321 66457d31 ada.characters.latin_1%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-finali.ads		20180525200321 bf4f806b ada.finalization%s
+D a-reatim.ads		20180525200322 4c16970e ada.real_time%s
+D a-reatim.adb		20180525200322 f9171193 ada.real_time%b
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-string.ads		20180525200321 90ac6797 ada.strings%s
+D a-strmap.ads		20180525200321 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20180525200321 fe8d9a91 ada.strings.unbounded%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-textio.ads		20180525200321 ffc84532 ada.text_io%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D core_execution_modes.ads  20220730104119 71dc5744 core_execution_modes%s
+D cpu_budget_monitor.ads  20220730104119 ef87d174 cpu_budget_monitor%s
+D experiment_info.ads	20220730104119 528df8db experiment_info%s
+D initial_delay.ads	20220730104119 c784d3bd initial_delay%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D real_time_no_elab.ads	20220730104119 4b470d91 real_time_no_elab%s
+D real_time_no_elab-timing_events_no_elab.ads  20220730104119 ccf2094b real_time_no_elab.timing_events_no_elab%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbbosu.adb		20220730104119 f9473d13 system.bb.board_support%b
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bbcppr.adb		20220730104119 8f3f9fd0 system.bb.cpu_primitives%b
+D s-bcprmu.ads		20180525200322 26f8acf6 system.bb.cpu_primitives.multiprocessors%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbexti.ads		20220730104119 e4538a92 system.bb.execution_time%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbprot.ads		20180525200322 f48a7e85 system.bb.protection%s
+D s-bbprot.adb		20220730104119 6c0dfd91 system.bb.protection%b
+D s-bbthre.ads		20220730104119 eed1e84f system.bb.threads%s
+D s-bbthre.adb		20220730104119 7b779390 system.bb.threads%b
+D s-bbthqu.ads		20220730104119 98733e50 system.bb.threads.queues%s
+D s-bbthqu.adb		20220730104119 3c9c1e31 system.bb.threads.queues%b
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-bbtime.adb		20220730104119 551c47d4 system.bb.time%b
+D s-bbtiev.ads		20180525200322 f167837c system.bb.timing_events%s
+D s-finmas.ads		20180525200321 7811a767 system.finalization_masters%s
+D s-finroo.ads		20180525200321 4ff27390 system.finalization_root%s
+D s-imgboo.ads		20180525200321 f5d971eb system.img_bool%s
+D s-imgint.ads		20180525200322 02dbe0c2 system.img_int%s
+D s-imglld.ads		20180525200321 f3220969 system.img_lld%s
+D s-io.ads		20180525200321 9e42f74f system.io%s
+D s-maccod.ads		20180525200321 6d68a701 system.machine_code%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220730104119 55f7991a system.os_interface%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20180525200321 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20180525200321 b16154c2 system.storage_pools%s
+D s-stposu.ads		20180525200321 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20180525200321 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20180525200322 801abd01 system.task_info%s
+D s-taspri.ads		20180525200322 351848fa system.task_primitives%s
+D s-taprop.ads		20220730104119 287989f9 system.task_primitives.operations%s
+D s-taprop.adb		20220730104119 56bc35d5 system.task_primitives.operations%b
+D s-taskin.ads		20220730104119 58b15916 system.tasking%s
+D s-tasdeb.ads		20180525200322 b275d76a system.tasking.debug%s
+D s-tasdeb.adb		20180525200322 16d62b3b system.tasking.debug%b
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+X 1 ada.ads
+16K9*Ada 20e8 6|41r9 182r5 7|39r6 41r14 116r10 119r10 122r10 628r5
+X 6 a-reatim.ads
+41K13*Real_Time 1|16k9 6|155E9 182l9 182e18 7|41b18 628l9 628t18
+43@22*Clock_Time 44r21 70r16
+51M9*Time<41|46M9> 52r26 53r26 68r26 72r26 72r58 74r26 74r58 76r26 76r40
+. 79r44 79r57 83r33 85r33 87r33 89r33 147r25 149r65 155c9 157r26 157r34 158r26
+. 158r34 7|187r25 187r57 197r17 204r17 207r26 209r17 226r25 226r57 233r38
+. 234r17 243r24 248r24 255r32 311r26 313r14 526r25 527r22 527r30 530r17 537r65
+. 538r22 538r30 562r37 577r41 581r23 587r31 596r17
+52m4*Time_First{51M9} 157c4
+53m4*Time_Last{51M9} 158c4 7|195r27 241r27 246r27 577r23 587r13
+55N4*Time_Unit
+61I9*Time_Span<41|84I9> 62r31 63r31 64r31 65r31 67r20 72r40 74r40 76r58 79r25
+. 92r33 92r63 94r33 94r63 96r27 96r63 98r26 98r63 100r45 100r63 102r33 104r26
+. 104r63 107r28 107r46 110r33 112r33 114r33 116r33 119r32 121r50 124r48 126r48
+. 128r48 131r42 135r42 147r64 149r47 160c9 162r31 162r44 163r31 163r44 165r31
+. 166r31 168r20 7|122r36 136r25 136r60 174r24 178r42 178r60 187r39 203r21
+. 206r40 216r32 216r50 219r14 226r39 240r21 245r40 255r45 265r17 270r22 277r32
+. 277r50 280r14 283r26 283r44 286r14 293r32 300r25 300r60 304r21 320r48 325r9
+. 332r48 337r9 344r42 357r17 487r47 492r9 515r42 519r14 526r64 537r47 557r40
+. 558r28 563r20 563r54 604r31 615r48 618r9
+62i4*Time_Span_First{61I9} 162c4 7|155r20
+63i4*Time_Span_Last{61I9} 163c4 7|96r45
+64i4*Time_Span_Zero{61I9} 165c4
+65i4*Time_Span_Unit{61I9} 166c4
+67i4*Tick{61I9} 168c4
+68V13*Clock{51M9}<41|187p13> 7|311b13 314l8 314t13
+72V14*"+"{51M9} 72>19 72>32 80s13 7|187b14 214l9 214t11 596s33
+72m19 Left{51M9} 7|187b18 195r49 197r32 203r46 204r32 207r18 209r32
+72i32 Right{61I9} 7|187b31 194r10 195r67 197r49 203r13 206r13 206r32 207r37
+. 209r54
+74V14*"-"{51M9} 74>19 74>32 7|226b14 253l9 253t11
+74m19 Left{51M9} 7|226b18 233r30 234r32 241r49 243r17 246r49 248r17
+74i32 Right{61I9} 7|226b31 233r10 233r44 234r49 240r13 245r13 245r32 246r72
+. 248r35
+76V14*"-"{61I9} 76>19 76>32 7|255b14 275l9 275t11 530s15
+76m19 Left{51M9} 7|255b18 262r10 263r27 265r37 267r13 268r45 270r60
+76m32 Right{51M9} 7|255b24 262r18 263r44 265r54 267r20 268r27 270r42
+79V14*"+"{51M9} 79>18 79>36 7|563s70
+79i18 Left{61I9} 80r15
+79m36 Right{51M9} 80r7
+83V14*"<"{boolean} 83>19 83>25 170b31 7|267r18 577r39 587r29
+83m19 Left{51M9}
+83m25 Right{51M9}
+85V14*"<="{boolean} 85>19 85>25 171b31
+85m19 Left{51M9}
+85m25 Right{51M9}
+87V14*">"{boolean} 87>19 87>25 172b31
+87m19 Left{51M9}
+87m25 Right{51M9}
+89V14*">="{boolean} 89>19 89>25 173b31 7|203r51 207r23 233r35 262r15
+89m19 Left{51M9}
+89m25 Right{51M9}
+92V14*"+"{61I9}<41|142p13> 92>19 92>25 7|216b14 220l9 220t11 563s18
+92i19 Left{61I9} 7|216b18 219r30
+92i25 Right{61I9} 7|216b24 219r43
+94V14*"-"{61I9}<41|150p13> 94>19 94>25 7|270s20 277b14 281l9 281t11
+94i19 Left{61I9} 7|277b18 280r30
+94i25 Right{61I9} 7|277b24 280r43
+96V14*"-"{61I9}<41|151p13> 96>19 7|270s17 283b14 287l9 287t11
+96i19 Right{61I9} 7|283b18 286r31
+98V14*"*"{61I9}<41|124p13> 98>19 98>37 7|136b14 176l9 176t11 180s20
+98i19 Left{61I9} 7|136b18 138r13 140r16 155r13 158r27 174r17
+98i37 Right{integer} 7|136b36 139r13 141r18 161r58 174r35
+100V14*"*"{61I9}<41|126p13> 100>19 100>37 7|178b14 181l9 181t11
+100i19 Left{integer} 7|178b18 180r22
+100i37 Right{61I9} 7|178b34 180r14
+102V14*"/"{integer}<41|128p13> 102>19 102>25 7|293b14 298l9 298t11
+102i19 Left{61I9} 7|293b18 297r28
+102i25 Right{61I9} 7|293b24 297r41
+104V14*"/"{61I9}<41|130p13> 104>19 104>37 7|300b14 305l9 305t11
+104i19 Left{61I9} 7|300b18 304r14
+104i37 Right{integer} 7|300b36 304r32
+107V14*"abs"{61I9} 107>20 174b31 7|158r22 207r32 209r49 246r67 248r30 557r30
+107i20 Right{61I9}
+110V14*"<"{boolean} 110>19 110>25 170b31 7|140r21 206r19 245r19 554r13
+110i19 Left{61I9}
+110i25 Right{61I9}
+112V14*"<="{boolean} 112>19 112>25 171b31
+112i19 Left{61I9}
+112i25 Right{61I9}
+114V14*">"{boolean} 114>19 114>25 172b31 7|138r18 206r38 245r38
+114i19 Left{61I9}
+114i25 Right{61I9}
+116V14*">="{boolean} 116>19 116>25 173b31 7|194r16 233r16
+116i19 Left{61I9}
+116i25 Right{61I9}
+119V13*To_Duration{duration}<41|117p13> 119>27 7|604b13 609l8 609t19
+119i27 TS{61I9} 7|604b26 608r33
+121V13*To_Time_Span{61I9}<41|118p13> 121>27 7|615b13 620l8 620t20
+121o27 D{duration} 7|615b27 619r33
+124V13*Nanoseconds{61I9}<41|157p13> 124>27 178r19 7|487b13 493l8 493t19
+124i27 NS{integer} 7|487b26 492r38
+126V13*Microseconds{61I9}<41|158p13> 126>27 176r19 7|320b13 326l8 326t20
+126i27 US{integer} 7|320b27 325r38
+128V13*Milliseconds{61I9}<41|159p13> 128>27 177r19 7|332b13 338l8 338t20
+128i27 MS{integer} 7|332b27 337r38
+131V13*Seconds{61I9} 131>22 133r19 179r19 7|515b13 520l8 520t15
+131i22 S{integer} 7|515b22 519r30
+135V13*Minutes{61I9} 135>22 137r19 180r19 7|344b13 359l8 359t15
+135i22 M{integer} 7|344b22 350r36
+145I9*Seconds_Count<long_long_integer> 147r40 149r27 7|526r40 529r13 537r27
+. 556r40 557r15
+147U14*Split 147>21 147<31 147<55 7|526b14 531l8 531t13
+147m21 T{51M9} 7|526b21 529r28 530r13
+147i31 SC{145I9} 7|526b31 529m7 530r23
+147i55 TS{61I9} 7|526b55 530m7
+149V13*Time_Of{51M9} 149>22 149>42 7|537b13 598l8 598t15
+149i22 SC{145I9} 7|537b22 576r16 577r47 581r29 587r37 596r23
+149i42 TS{61I9} 7|537b42 554r10 557r35 558r21 563r15 596r35
+X 7 a-reatim.adb
+50K12 OSI=50:31 325r49 337r49 345r48 346r48 357r41 492r49 519r40 527r36 538r36
+. 608r54 619r37
+51I12 LLI{long_long_integer} 105r26 105r65 110r33 110r45 116r36 119r46 122r47
+. 161r53 219r25 219r38 280r25 280r38 286r26 297r23 297r36 325r33 325r44 337r33
+. 337r44 345r24 345r31 345r43 346r24 346r31 346r43 350r24 350r31 357r36 365r26
+. 365r65 437r23 438r23 441r16 442r16 445r19 448r19 451r19 457r24 457r63 458r24
+. 463r29 471r31 476r53 492r33 492r44 499r33 499r45 500r14 519r25 519r35
+93M9 Uint_64 96r36 97r36 146r28 154r27 158r13 161r28 161r39 195r18 195r40
+. 195r58 197r23 197r40 204r23 209r23 209r40 234r23 234r40 241r18 241r40 246r18
+. 246r40 246r58 263r18 263r35 265r28 265r45 268r18 268r36 270r33 270r51
+96N4 Max_Pos_Time_Span 150r13 263r54
+97N4 Max_Neg_Time_Span 148r13 156r13 203r54 204r40 241r58 243r30 268r54
+105V13 Mul_Div{51I12} 105>22 105>31 105>44 365b13 481l8 481t15 608s12 619s12
+105i22 V{51I12} 365b22 437r30 438r30 457r38
+105i31 M{natural} 365b31 457r29 458r29
+105i44 D{positive} 365b44 457r68 463r34 471r36 476r58
+110V13 Rounded_Div{51I12} 110>26 110>29 111r19 325s20 337s20 492s20 499b13
+. 509l8 509t19
+110i26 L{51I12} 499b26 502r10 503r18 505r18
+110i29 R{51I12} 499b29 503r22 505r22 508r21
+115V13 To_Duration[14|20]{duration} 607s9
+118V13 To_Integer[14|20]{long_long_integer} 619s21
+121V13 To_Integer[14|20]{long_long_integer} 608s21
+128i4 Duration_Units{positive} 608r38 619r59
+137b7 Is_Negative{boolean} 147r13
+146m7 Max_Value{93M9} 171r34
+154m7 Abs_Left{93M9} 171r58
+161m7 Abs_Right{93M9} 171r10 171r46
+345i7 Min_M{51I12} 354r18
+346i7 Max_M{51I12} 354r40
+350i7 Sec_M{51I12} 354r10 354r32 357r28
+437i7 V_Hi{51I12} 458r17
+438i7 V_Lo{51I12} 457r17
+441i7 V_M_Hi{51I12} 458m7 463r20 471r20
+442i7 V_M_Lo{51I12} 457m7 458r34 459m7 459r17 476r21
+445i7 Result_Hi{51I12} 463m7 467r10 472m7 472r20 480r14
+448i7 Result_Lo{51I12} 476m7 480r26
+451i7 Remainder{51I12} 471m7 476r30
+500i7 Left{51I12} 503m10 505m10 508r14
+527m7 Res{6|51M9} 529r32 530r29
+538m7 Res{6|51M9} 557r51 558r39 563r65 563r72 577r35 581r53 587r25 596r29
+556i13 Seconds_From_Ts{6|145I9} 563r31 576r21 577r52 581r34
+562m13 Remainder_Ts{6|51M9} 581r59
+X 14 a-unccon.ads
+20v14*Unchecked_Conversion 7|39w10 116r14 119r14 122r14
+X 23 system.ads
+45K9*System 6|38r6 47r7 55r34 155r21 160r26 7|36r6 37r6 50r24 313r20 627r4
+. 23|168e11
+X 26 s-bbbosu.adb
+51U14 Initialize_CPU_Devices 52i<c,__gnat_initialize_cpu_devices>22
+X 28 s-bbcppr.adb
+81U14 Undef_Handler 83i24
+85U14 Dabt_Handler 87i24
+98U14 FIQ_Handler 100i24
+102U14 IRQ_Handler 104i24
+X 29 s-bcprmu.ads
+37U14*Start_All_CPUs 38i<c,__gnat_start_slave_cpus>22
+X 41 s-bbtime.ads
+46M9*Time
+84I9*Time_Span<long_long_integer>
+X 54 s-osinte.ads
+51K16*OS_Interface 6|38w13 39r30 47r14 55r41 155r28 160r33 7|50r31 54|256e24
+98M12*Time{41|46M9} 6|155r41
+101I12*Time_Span{41|84I9} 6|160r46
+105N4*Ticks_Per_Second 6|47r27 55r54 7|325r53 337r53 345r52 346r52 357r45
+. 492r53 519r44 527r40 538r40 608r58 619r41
+X 56 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 64 s-taspri.ads
+40K16*Task_Primitives 7|37r13 313r27 64|82e27
+X 65 s-taprop.ads
+46K32*Operations 7|37w29 313r43 65|167e38
+95M9*Time<41|46M9>
+97V13*Monotonic_Clock{95M9} 7|313s54
+X 66 s-taprop.adb
+74U14 Initialize_Slave 75i24
+X 67 s-taskin.ads
+58K16*Tasking 7|36w13 627r11 67|462e19
+407V13*Get_Sec_Stack{56|46P9} 408i<c,__gnat_get_secondary_stack>22
+432U14*Initialize 7|627s19
+

@@ -1,0 +1,62 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+A -g
+P DB ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.assertions%b	s-assert.adb		52f1910f NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W system%s		system.ads		system.ali
+W system.exceptions_debug%s  s-excdeb.adb	s-excdeb.ali
+
+U system.assertions%s	s-assert.ads		17fd9cd9 NE OL PK
+W system%s		system.ads		system.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D system.ads		20220730104119 da70b04d system%s
+D s-assert.ads		20180525200321 cd8d2c94 system.assertions%s
+D s-assert.adb		20180525200321 c1526fca system.assertions%b
+D s-excdeb.ads		20180525200321 7737c084 system.exceptions_debug%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+X 1 ada.ads
+16K9*Ada 20e8 6|34r6 46r7
+X 2 a-except.ads
+54K13*Exceptions 349e19 6|34w10 46r11
+90U14*Raise_Exception 6|46s22
+X 4 system.ads
+45K9*System 168e11 5|41r9 50r5 6|35r6 37r14 45r7 49r5
+X 5 s-assert.ads
+41K16*Assertions 4|45k9 5|50l12 50e22 6|37b21 49l12 49t22
+43X4*Assert_Failure 6|46r39
+46U14*Raise_Assert_Failure 46>36 47r22 6|43b14 47l8 47t28
+46a36 Msg{string} 6|43b36 46r64
+X 7 s-excdeb.ads
+40K16*Exceptions_Debug 6|35w13 45r14 7|78e28
+62U14*Debug_Raise_Assert_Failure 6|45s31
+

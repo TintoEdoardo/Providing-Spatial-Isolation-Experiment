@@ -1,0 +1,90 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U ada.numerics.short_complex_elementary_functions%b  a-nscefu.ads  10335294 NE OL PU PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+Z ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
+W ada.numerics.generic_complex_elementary_functions%s
+Z ada.numerics.generic_complex_types%s
+Z ada.numerics.generic_elementary_functions%s
+Z ada.numerics.long_elementary_functions%s  a-nlelfu.ads  a-nlelfu.ali
+Z ada.numerics.long_long_elementary_functions%s  a-nllefu.ads  a-nllefu.ali
+W ada.numerics.short_complex_types%s  a-nscoty.ads  a-nscoty.ali
+Z system.fat_sflt%s	s-fatsfl.ads		s-fatsfl.ali
+
+U ada.numerics.short_complex_elementary_functions%s  a-nscefu.ads  796ac0fa EB NE OL PU PK
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.generic_complex_elementary_functions%s
+Z ada.numerics.generic_complex_types%s
+W ada.numerics.short_complex_types%s  a-nscoty.ads  a-nscoty.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-numeri.ads		20180525200322 bb51c45a ada.numerics%s
+D a-nuelfu.ads		20180525200322 51c3d5d5 ada.numerics.elementary_functions%s
+D a-ngcefu.ads		20180525200321 228ead62 ada.numerics.generic_complex_elementary_functions%s
+D a-ngcefu.adb		20180525200321 b9026901 ada.numerics.generic_complex_elementary_functions%b
+D a-ngcoty.ads		20180525200321 e7845fd0 ada.numerics.generic_complex_types%s
+D a-ngcoty.adb		20180525200321 401af2c5 ada.numerics.generic_complex_types%b
+D a-ngelfu.ads		20180525200322 ac447086 ada.numerics.generic_elementary_functions%s
+D a-ngelfu.adb		20180525200322 1a32e079 ada.numerics.generic_elementary_functions%b
+D a-nlelfu.ads		20180525200322 4a933b1e ada.numerics.long_elementary_functions%s
+D a-nllefu.ads		20180525200322 a34f74c3 ada.numerics.long_long_elementary_functions%s
+D a-nscefu.ads		20180525200321 10335294 ada.numerics.short_complex_elementary_functions%s
+D a-nscefu.ads		20180525200321 10335294 ada.numerics.short_complex_elementary_functions%b
+D a-nscoty.ads		20180525200321 f086fb56 ada.numerics.short_complex_types%s
+D a-nscoty.ads		20180525200321 f086fb56 ada.numerics.short_complex_types%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D system.ads		20220730104119 da70b04d system%s
+D s-exnllf.ads		20180525200322 bc7ebbdc system.exn_llf%s
+D s-fatgen.ads		20180525200322 49cbaf86 system.fat_gen%s
+D s-fatgen.adb		20180525200322 28cd35f5 system.fat_gen%b
+D s-fatsfl.ads		20180525200322 e2f873d3 system.fat_sflt%s
+D s-gcmain.ads		20180525200322 f623c353 system.generic_c_math_interface%s
+D s-libdou.ads		20180525200322 642b3a67 system.libm_double%s
+D s-libpre.ads		20180525200322 f93cda94 system.libm_prefix%s
+D s-libsin.ads		20180525200322 7070a09c system.libm_single%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+X 1 ada.ads
+16K9*Ada 20e8 14|16r6 17r6 19r9 20r7 21r44 22r14
+X 3 a-numeri.ads
+16K13*Numerics 1|16k9 3|32e17 14|16r10 17r10 19r13 20r11 21r48 22r18
+X 5 a-ngcefu.ads
+21k22*Generic_Complex_Elementary_Functions 55e54 14|17w19 20r20
+X 14 a-nscefu.ads
+19K22*Short_Complex_Elementary_Functions[5|21] 3|16k13 14|22r27
+X 16 a-nscoty.ads
+18K22*Short_Complex_Types[7|39] 14|16w19 21r57
+

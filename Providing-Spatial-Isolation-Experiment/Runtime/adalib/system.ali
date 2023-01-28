@@ -1,0 +1,128 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RR PURE_BARRIERS
+RR NO_ABORT_STATEMENTS
+RR NO_ASYNCHRONOUS_CONTROL
+RR NO_DYNAMIC_ATTACHMENT
+RR NO_DYNAMIC_PRIORITIES
+RR NO_EXCEPTION_REGISTRATION
+RR NO_IMPLICIT_TASK_ALLOCATIONS
+RR NO_IMPLICIT_PROTECTED_OBJECT_ALLOCATIONS
+RR NO_LOCAL_TIMING_EVENTS
+RR NO_LOCAL_PROTECTED_OBJECTS
+RV NO_LONG_LONG_INTEGERS
+RR NO_PROTECTED_TYPE_ALLOCATORS
+RR NO_REQUEUE_STATEMENTS
+RR NO_SELECT_STATEMENTS
+RR NO_SPECIFIC_TERMINATION_HANDLERS
+RR NO_TASK_ALLOCATORS
+RR NO_TASK_ATTRIBUTES_PACKAGE
+RR NO_TASK_HIERARCHY
+RR NO_TASK_TERMINATION
+RR NO_TERMINATE_ALTERNATIVES
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+RR MAX_SELECT_ALTERNATIVES=0
+RR MAX_TASK_ENTRIES=0
+RR MAX_ASYNCHRONOUS_SELECT_NESTING=0
+R ada.execution_time.group_budgets
+R ada.execution_time.timers
+R system.multiprocessors.dispatching_domains
+
+U system%s		system.ads		da70b04d NE OL PU PK
+
+D system.ads		20220730104119 da70b04d system%s
+X 1 system.ads
+45K9*System 128E9 168l5 168e11
+54E9*Name 54e35 55r27
+54n18*SYSTEM_NAME_GNAT{54E9} 55r35
+55e4*System_Name{54E9}
+59N4*Min_Int
+60N4*Max_Int
+62N4*Max_Binary_Modulus
+63N4*Max_Nonbinary_Modulus
+65N4*Max_Base_Digits
+66N4*Max_Digits
+68N4*Max_Mantissa 69r49
+69N4*Fine_Delta
+71N4*Tick
+75M9*Address 76r41 77r28 85r33 86r33 87r33 88r33 89r33 128c9 129r28
+77m4*Null_Address{75M9} 129c4
+79N4*Storage_Unit
+80N4*Word_Size 81r36
+81N4*Memory_Size 128r24
+85V14*"<"{boolean} 85>19 85>25 91b31
+85m19 Left{75M9}
+85m25 Right{75M9}
+86V14*"<="{boolean} 86>19 86>25 92b31
+86m19 Left{75M9}
+86m25 Right{75M9}
+87V14*">"{boolean} 87>19 87>25 93b31
+87m19 Left{75M9}
+87m25 Right{75M9}
+88V14*">="{boolean} 88>19 88>25 94b31
+88m19 Left{75M9}
+88m25 Right{75M9}
+89V14*"="{boolean} 89>19 89>25 95b31
+89m19 Left{75M9}
+89m25 Right{75M9}
+99E9*Bit_Order 99e57 100r33 101r26
+99n23*High_Order_First{99E9}
+99n41*Low_Order_First{99E9}
+100e4*Default_Bit_Order{99E9} 102r26
+115i4*Max_Priority{positive}
+116i4*Max_Interrupt_Priority{positive}
+118I12*Any_Priority{integer} 119r34 120r34
+119I12*Priority{118I12} 122r32
+120I12*Interrupt_Priority{118I12}
+122i4*Default_Priority{119I12}
+141b4 Atomic_Sync_Default{boolean}
+142b4 Backend_Divide_Checks{boolean}
+143b4 Backend_Overflow_Checks{boolean}
+144b4 Command_Line_Args{boolean}
+145b4 Configurable_Run_Time{boolean}
+146b4 Denorm{boolean}
+147b4 Duration_32_Bits{boolean}
+148b4 Exit_Status_Supported{boolean}
+149b4 Fractional_Fixed_Ops{boolean}
+150b4 Frontend_Layout{boolean}
+151b4 Machine_Overflows{boolean}
+152b4 Machine_Rounds{boolean}
+153b4 Preallocated_Stacks{boolean}
+154b4 Signed_Zeros{boolean}
+155b4 Stack_Check_Default{boolean}
+156b4 Stack_Check_Probes{boolean}
+157b4 Stack_Check_Limits{boolean}
+158b4 Support_Aggregates{boolean}
+159b4 Support_Composite_Assign{boolean}
+160b4 Support_Composite_Compare{boolean}
+161b4 Support_Long_Shifts{boolean}
+162b4 Always_Compatible_Rep{boolean}
+163b4 Suppress_Standard_Library{boolean}
+164b4 Use_Ada_Main_Program_Name{boolean}
+165b4 Frontend_Exceptions{boolean}
+166b4 ZCX_By_Default{boolean}
+

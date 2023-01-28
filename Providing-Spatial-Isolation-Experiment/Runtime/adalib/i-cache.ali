@@ -1,0 +1,83 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U interfaces.cache%b	i-cache.adb		a24bbdf2 NE OL PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.arm_v7ar%s	i-arm_v7ar.adb		i-arm_v7ar.ali
+W system%s		system.ads		system.ali
+
+U interfaces.cache%s	i-cache.ads		dd756ccf NE OL PR PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D i-arm_v7ar.ads	20220730104119 260e8fc2 interfaces.arm_v7ar%s
+D i-arm_v7ar.adb	20220730104119 93020779 interfaces.arm_v7ar%b
+D i-cache.ads		20220730104119 7073c4ee interfaces.cache%s
+D i-cache.adb		20220730104119 2e464693 interfaces.cache%b
+D system.ads		20220730104119 da70b04d system%s
+D s-maccod.ads		20180525200321 6d68a701 system.machine_code%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20180525200321 ed88f8fb system.storage_elements%b
+X 3 interfac.ads
+38K9*Interfaces 184e15 6|37r9 51r5 7|32r6 32r31 35r14 77r5
+X 4 i-arm_v7ar.ads
+37K20*ARM_V7AR 138e24 7|32w17 32r42
+43K12*CP15 113e12 7|49r10 69r10
+48U17*DCCIMVAC 7|69s15
+52U17*DCIMVAC 7|49s15
+117K12*Barriers 128e16 7|55r7 75r7
+118U17*DSB 7|55s16 75s16
+X 6 i-cache.ads
+37K20*Cache 3|38k9 6|51l16 51e21 7|35b25 77l16 77t21
+43U14*Dcache_Invalidate_By_Range 44>7 45>7 7|38b14 56l8 56t34
+44m7 Start{8|75M9} 7|38b42 45r19 46r15
+45i7 Len{10|62I12} 7|38b59 51r26
+47U14*Dcache_Flush_By_Range 48>7 49>7 7|58b14 76l8 76t29
+48m7 Start{8|75M9} 7|58b37 65r19 66r15
+49i7 Len{10|62I12} 7|58b54 71r26
+X 7 i-cache.adb
+40N7 Line_Size 45r29 50r23 52r25
+41i7 Line_Off{10|62I12} 45m7 46r23 51r32
+42i7 Off{10|62I12} 47m7 50m10 50r17 51r20
+43m7 Addr{8|75M9} 46m7 49r24 52m10 52r18
+60N7 Line_Size 65r29 70r23 72r25
+61i7 Line_Off{10|62I12} 65m7 66r23 71r32
+62i7 Off{10|62I12} 67m7 70m10 70r17 71r20
+63m7 Addr{8|75M9} 66m7 69r25 72m10 72r18
+X 8 system.ads
+45K9*System 6|34w6 35r6 44r15 45r15 48r15 49r15 7|33w6 33r18 36r8 8|168e11
+75M9*Address 6|44r22 48r22 7|38r50 43r14 58r45 63r14
+X 10 s-stoele.ads
+42K16*Storage_Elements 6|35w13 45r22 49r22 7|36r15 10|117e28
+54I9*Storage_Offset<integer>
+62I12*Storage_Count{54I9} 6|45r39 49r39 7|38r65 41r18 42r13 58r60 61r18 62r13
+76V14*"+"{8|75M9} 7|52s23 72s23
+86V14*"-"{8|75M9} 7|46s21 66s21
+96V14*"mod"{54I9} 7|45s25 65s25
+

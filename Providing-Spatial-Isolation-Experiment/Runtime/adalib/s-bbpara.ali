@@ -1,0 +1,51 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U system.bb.parameters%s  s-bbpara.ads		4feeb08b NE OL PU PK
+W system.bb%s		s-bb.ads		s-bb.ali
+
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+X 1 system.ads
+45K9*System 168e11 3|43r9 77r41 78r34 124r5
+118I12*Any_Priority{integer}
+120I12*Interrupt_Priority{118I12} 3|77r48 78r41
+X 2 s-bb.ads
+40K16*BB 1|45k9 2|95e14 3|43r16 124r12
+X 3 s-bbpara.ads
+43K19*Parameters 2|40k16 3|124l15 124e25
+50N4*Clock_Frequency 54r35
+54N4*Ticks_Per_Second
+63I12*Interrupt_Range{natural}
+67N4*Trap_Vectors
+77i4*Interrupt_Unmask_Priority{1|120I12}
+101N4*Context_Buffer_Capacity
+107N4*Interrupt_Stack_Size
+111N4*Interrupt_Sec_Stack_Size
+118N4*Max_Number_Of_CPUs 121r41
+121b4*Multiprocessor{boolean}
+

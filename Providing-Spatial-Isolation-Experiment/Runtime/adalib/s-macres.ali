@@ -1,0 +1,53 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U system.machine_reset%b  s-macres.adb		ee583021 NE OL PK
+W interfaces%s		interfac.ads		interfac.ali
+Z system%s		system.ads		system.ali
+
+U system.machine_reset%s  s-macres.ads		39225837 NE OL PK
+W system%s		system.ads		system.ali
+
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D system.ads		20220730104119 da70b04d system%s
+D s-macres.ads		20180525200321 e352e87a system.machine_reset%s
+D s-macres.adb		20220730104119 57bf8a33 system.machine_reset%b
+X 1 interfac.ads
+38K9*Interfaces 184e15 4|34w6 64r21 67r27
+74M9*Unsigned_32 4|64r32 67r38
+X 2 system.ads
+45K9*System 168e11 3|36r9 42r5 4|36r14 65r25 68r25 85r5
+75M9*Address 4|65r25 68r25
+X 3 s-macres.ads
+36K16*Machine_Reset 2|45k9 3|42l12 42e25 4|36b21 85l12 85t25
+39U14*Stop 40r22 4|81b14 84l8 84t12
+X 4 s-macres.adb
+37U14 Os_Exit 37>23 38r22 39r24 53s7 60b14 75l8 75t15 83s7
+37i23 Status{integer} 60b23 61r28
+42U14 Os_Abort 43r22 44r24 51b14 54l8 54t16
+64m7 SLCR_UNLOCK{1|74M9} 70m7
+67m7 SLCR_PSS_RST_CTRL{1|74M9} 73m10
+

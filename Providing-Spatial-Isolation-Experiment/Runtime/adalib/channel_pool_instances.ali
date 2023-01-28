@@ -1,0 +1,54 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U channel_pool_instances%s  channel_pool_instances.ads  5e060d7c EE OO PF PK
+W channel_pool%s	channel_pool.adb	channel_pool.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-finali.ads		20180525200321 bf4f806b ada.finalization%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D channel_pool.ads	20221030133516 1d8f4e36 channel_pool%s
+D channel_pool_instances.ads  20221030134307 4389434a channel_pool_instances%s
+D system.ads		20220730104119 da70b04d system%s
+D s-finroo.ads		20180525200321 4ff27390 system.finalization_root%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20180525200321 b16154c2 system.storage_pools%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+X 7 channel_pool.ads
+14K9*Channel_Pool 49e17 8|10w6 17r28
+28R9*Channel_Bounded_Pool<14|42R9> 31e65 8|17r41
+X 8 channel_pool_instances.ads
+12K9*Channel_Pool_Instances 19l5 19e27
+17r4*High_Low_Channel_Pool{7|28R9}
+

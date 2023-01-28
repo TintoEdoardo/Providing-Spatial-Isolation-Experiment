@@ -1,0 +1,182 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB LC TF  ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_FINALIZATION
+RV NO_LOCAL_ALLOCATORS
+RV NO_PROTECTED_TYPES
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+RV MAX_PROTECTED_ENTRIES=1
+
+U channel_pool_access%b	channel_pool_access.adb	0bf0a2d5 NE OO PK
+W channel_logger%s	channel_logger.adb	channel_logger.ali
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.time%s	s-bbtime.adb		s-bbtime.ali
+
+U channel_pool_access%s	channel_pool_access.ads	6e36eb00 BN EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.finalization%s	a-finali.ads		a-finali.ali
+W ada.unchecked_deallocation%s
+W channel_pool_instances%s  channel_pool_instances.ads  channel_pool_instances.ali
+W mixed_criticality_system%s  mixed_criticality_system.ads  mixed_criticality_system.ali
+Z system.pool_size%s	s-poosiz.adb		s-poosiz.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-finali.ads		20180525200321 bf4f806b ada.finalization%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20180525200321 eff36322 ada.unchecked_deallocation%s
+D channel_logger.ads	20221105172201 f0487e24 channel_logger%s
+D channel_pool.ads	20221030133516 1d8f4e36 channel_pool%s
+D channel_pool_access.ads  20221104173557 2fca6484 channel_pool_access%s
+D channel_pool_access.adb  20221102073621 0ef6df8b channel_pool_access%b
+D channel_pool_instances.ads  20221030134307 4389434a channel_pool_instances%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-finroo.ads		20180525200321 4ff27390 system.finalization_root%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-poosiz.ads		20180525200321 9d8c569f system.pool_size%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20180525200321 b16154c2 system.storage_pools%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+X 1 ada.ads
+16K9*Ada 20e8 10|11r6 12r6 45r34 113r9
+X 3 a-finali.ads
+40K13*Finalization 68e21 10|11w10 45r38
+50H9*Limited_Controlled<18|40R9> 66e55 10|45r51
+53U14*Initialize<18|44p14>
+54U14*Finalize<18|43p14>
+X 7 a-uncdea.ads
+20u15*Unchecked_Deallocation 10|12w10 113r13
+X 8 channel_logger.ads
+13K9*Channel_Logger 51e19 11|12w6 109r13 133r13 155r10 177r10
+20A9*Array_Times(17|84I9)<integer><integer>
+28a4*Array_Allocation_Times{20A9} 11|156m12
+29a4*Array_Deallocation_Times{20A9} 11|178m12
+30a4*Array_Send_Ownership_Times{20A9} 11|110m15
+31a4*Array_Receive_Ownership_Times{20A9} 11|134m15
+X 10 channel_pool_access.ads
+16K9*Channel_Pool_Access 118l5 118e24 11|15b14 183l5 183t24
+21E9*Channel_Levels<13|11E9>
+26R12 Element_Type 35r45 76r42 114r12 11|42r35 46r42 49r39 150r35
+31k12*Shared_Pointer 26z12 112E7 116l8 116e22 11|17b17 181l8 181t22
+35P12*Element_Type_Reference(26R12) 40r11 47r20 67r28 114r26 11|24r28
+45R12*Reference_Type<3|50R9> 3|53P14 54P14 10|48e17 55r45 56r45 59r31 66p16
+. 66r33 69p17 69r38 70r38 74p17 74r46 75p17 75r49 78p17 78r42 80p16 80r37
+. 88r33 92r33 97r31 100p17 101r30 105p17 106r30 11|23r33 30r38 31r38 39r46
+. 45r49 53r42 60r37 71r45 78r44 92r32 115r32 140r29 161r29 18|42p14
+47p10 Element{35P12} 11|27r27 35m15 35r33 36m16 42m20 49m20 50r20 56m34 57m20
+. 64r27 150m20 171m34 172m20
+54W22*Shared_Reference 58E10 60l11 60e27 11|70b22 84l11 84t27
+55U20 Send 55=26 11|71b20 76l14 76t18
+55r26 Reference{45R12} 11|71b26 74m39
+56Y16 Receive 56=26 11|78b16 83l14 83t21
+56r26 Reference{45R12} 11|81m19
+58b10 Message_Available{boolean} 11|75m13 79r17 82m13
+59r10 Internal_Reference{45R12} 11|74m19 74r19 81m30 81r30
+66V16*Get{35P12} 66>21 11|23b16 28l11 28t14
+66r21 Reference{45R12} 11|23b21 27r17
+69U17*Move 69=23 70=23 11|30b17 37l11 37t15 74s13 81s13 102s13 126s13
+69r23 Left{45R12} 11|30b23 34m16 35m10
+70r23 Right{45R12} 11|31b23 35r27 36m10
+74U17*Allocate 74=27 11|39b17 43l11 43t19
+74r27 Reference{45R12} 11|39b27 42m10
+75U17*Allocate 75=27 76>27 11|45b17 51l11 51t19
+75r27 Reference{45R12} 11|45b27 49m10 50r10
+76*27 From_Element{26R12} 11|46b27 50r35
+78U17*Free 78=23 11|34s10 53b17 58l11 58t15
+78r23 Reference{45R12} 11|53b23 56m24 56r24 57m10
+80V16*Is_Null{boolean} 80>25 11|60b16 65l11 65t18
+80r25 Reference{45R12} 11|60b25 64r17
+86W22*Experiment_Shared_Reference 96E10 98l11 98e38 11|89b22 137l11 137t38
+87U20 Experiment_Send 88=13 89>13 90>13 11|91b20 112l14 112t29
+88r13 Reference{45R12} 11|92b13 102m39
+89i13 Iteration{positive} 11|93b13 110r43
+90i13 Experiment{integer} 11|94b13 110r54
+91Y16 Experiment_Receive 92=13 93>13 94>13 11|114b16 136l14 136t32
+92r13 Reference{45R12} 11|126m19
+93i13 Iteration{positive} 11|134r46
+94i13 Experiment{integer} 11|134r57
+96b10 Message_Available{boolean} 11|103m13 118r17 127m13
+97r10 Internal_Reference{45R12} 11|102m19 102r19 126m30 126r30
+100U17*Experiment_Allocate 101=10 102>10 103>10 11|139b17 158l11 158t30
+101r10 Reference{45R12} 11|140b10 150m10
+102i10 Iteration{positive} 11|141b10 156r36
+103i10 Experiment{integer} 11|142b10 156r47
+105U17*Experiment_Free 106=10 107>10 108>10 11|160b17 180l11 180t26
+106r10 Reference{45R12} 11|161b10 171m24 171r24 172m10
+107i10 Iteration{positive} 11|162b10 178r38
+108i10 Experiment{integer} 11|163b10 178r49
+112U17 Free_Element[7|20] 11|56s10 171s10
+X 11 channel_pool_access.adb
+78r25 Reference{10|45R12}
+96m13 Time_Event_1{17|46M9} 100m13 108r41
+97m13 Time_Event_2{17|46M9} 105m13 108r26
+98i13 Send_Time{17|84I9} 108m13 111r15
+115r13 Reference{10|45R12}
+116i13 Iteration{positive}
+117i13 Experiment{integer}
+120m13 Time_Event_1{17|46M9} 124m13 132r44
+121m13 Time_Event_2{17|46M9} 129m13 132r29
+122i13 Receive_Time{17|84I9} 132m13 135r18
+144m10 Time_Event_1{17|46M9} 148m10 154r39
+145m10 Time_Event_2{17|46M9} 152m10 154r24
+146i10 Alloc_Time{17|84I9} 154m10 157r12
+165m10 Time_Event_1{17|46M9} 169m10 176r38
+166m10 Time_Event_2{17|46M9} 174m10 176r23
+167i10 Free_Time{17|84I9} 176m10 179r12
+X 12 channel_pool_instances.ads
+12K9*Channel_Pool_Instances 10|13w6 41r9 12|19e27
+17r4*High_Low_Channel_Pool{9|28R9} 10|41r32
+X 13 mixed_criticality_system.ads
+7K9*Mixed_Criticality_System 10|14w6 21r31 13|13e29
+11E9*Criticality 10|21r56 13|11e35
+X 14 system.ads
+45K9*System 11|13r6 13r26 96r28 97r28 98r28 100r29 105r29 120r28 121r28 122r28
+. 124r29 129r29 144r25 145r25 146r25 148r26 152r26 165r25 166r25 167r25 169r26
+. 174r26 14|168e11
+X 15 s-bb.ads
+40K16*BB 11|13r13 13r33 96r35 97r35 98r35 100r36 105r36 120r35 121r35 122r35
+. 124r36 129r36 144r32 145r32 146r32 148r33 152r33 165r32 166r32 167r32 169r33
+. 174r33 15|95e14
+X 17 s-bbtime.ads
+43K19*Time 11|13w16 13r36 96r38 97r38 98r38 100r39 105r39 120r38 121r38 122r38
+. 124r39 129r39 144r35 145r35 146r35 148r36 152r36 165r35 166r35 167r35 169r36
+. 174r36 17|248e19
+46M9*Time 11|96r43 97r43 120r43 121r43 144r40 145r40 165r40 166r40
+84I9*Time_Span<long_long_integer> 11|98r43 122r43 146r40 167r40
+149V14*"-"{84I9} 11|108s39 132s42 154s37 176s36
+187V13*Clock{46M9} 11|100s44 105s44 124s44 129s44 148s41 152s41 169s41 174s41
+X 18 s-finroo.ads
+42U14*Adjust
+

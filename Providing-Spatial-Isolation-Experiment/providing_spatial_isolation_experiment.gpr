@@ -1,0 +1,19 @@
+project Providing_Spatial_Isolation_Experiment is
+
+   for Languages use ("ada");
+   for Main use ("main.adb");
+   for Source_Dirs use ("src/");
+   for Object_Dir use "obj";
+   for Runtime ("ada") use "Runtime";
+   for Target use "arm-eabi";
+
+   package Compiler is
+      for Switches ("ada") use ("-g", "-gnatwa", "-gnatQ", "-fstack-usage");
+   end Compiler;
+
+   package Builder is
+      for Switches ("ada") use ("-g", "-O0");
+   end Builder;
+
+end Providing_Spatial_Isolation_Experiment;
+

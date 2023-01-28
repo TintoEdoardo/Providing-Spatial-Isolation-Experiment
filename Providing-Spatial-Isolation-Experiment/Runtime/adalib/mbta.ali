@@ -1,0 +1,89 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U mbta%b		mbta.adb		a233672d NE OO PK IU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.img_lld%s	s-imglld.adb		s-imglld.ali
+
+U mbta%s		mbta.ads		c4ea6116 NE OO PR PK IU
+W system%s		system.ads		system.ali
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-textio.ads		20180525200321 ffc84532 ada.text_io%s
+D mbta.ads		20220730104119 37d46f23 mbta%s
+D mbta.adb		20220730104119 6a2f4d3c mbta%b
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-imgint.ads		20180525200322 02dbe0c2 system.img_int%s
+D s-imglld.ads		20180525200321 f3220969 system.img_lld%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+X 1 ada.ads
+16K9*Ada 20e8 4|2r6 31r7 34r10 38r16
+X 2 a-textio.ads
+36K13*Text_IO 52e16 4|2w10 31r11 34r14 38r20
+46U14*Put_Line 4|31s19 34s22 38s28
+X 3 mbta.ads
+4K9*MBTA 29l5 29e9 4|5b14 46l5 46t9
+22E9*RTE_Primitive 22e74 25r19 4|7r33 13r14 17r20 33r24 34r32
+22n27*DU{22E9}
+22n31*CSN{22E9}
+22n36*CSW{22E9}
+22n41*AH{22E9}
+22n45*WEA_UA{22E9}
+22n53*SM{22E9}
+22n57*CM{22E9}
+22n61*BED{22E9}
+22n66*EEV{22E9}
+22n71*BI{22E9}
+24U14*Log_RTE_Primitive_Duration 25>7 25>34 25>65 4|16b14 27l8 27t34
+25e7 Primitive{22E9} 4|17b8 19r60 24r28 25r35
+25o34 Primitive_Duration{duration} 4|17b35 24r49
+25i65 CPU_Id{10|23I12} 4|17b66 19r52 24r20 25r27
+27U14*Print_Log_RTE_Primitive_Duration 4|29b14 44l8 44t40
+X 4 mbta.adb
+7A9 Indexes_Array(natural)<3|22E9> 9r37
+9a4 Overall_Indexes(7A9) 19r35 25m10 35r24 37r27
+11i4 Max_Observations{positive} 13r34 23r18
+12A9 MBTA_Log_Array(duration)<3|22E9><integer> 14r30
+14a4 MBTA_Log(12A9) 24m10 39r35
+19i7 Index{natural} 23r10 24r39 25r49
+33e11 Primitive{3|22E9} 34r53 35r52 37r52 39r53
+36i14 CPU_Id{10|23I12} 37r44 39r45
+37i17 I{integer} 39r64
+X 5 system.ads
+45K9*System 3|1r6 2r5 5|168e11
+X 10 s-multip.ads
+18K16*Multiprocessors 3|1w13 2r12 10|31e27
+21I9*CPU_Range<short_short_integer>
+23I12*CPU{21I9} 3|25r74 4|9r29 14r22 17r75 35r41 36r24
+

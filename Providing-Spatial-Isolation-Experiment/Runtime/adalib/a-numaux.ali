@@ -1,0 +1,38 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.numerics.aux%s	a-numaux.ads		0b561aea NE OL PU PK
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-numeri.ads		20180525200322 bb51c45a ada.numerics%s
+D a-numaux.ads		20180525200322 b007deb0 ada.numerics.aux%s
+D system.ads		20220730104119 da70b04d system%s
+X 1 ada.ads
+16K9*Ada 20e8 3|35r9 37r5
+X 2 a-numeri.ads
+16K13*Numerics 1|16k9 2|32e17 3|35r13 37r9
+X 3 a-numaux.ads
+35K22*Aux 2|16k13 3|37l18 37e21
+

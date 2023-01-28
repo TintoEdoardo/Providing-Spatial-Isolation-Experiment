@@ -1,0 +1,53 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U system.bb.deadlines%s	s-bbdead.ads		0d8edd8f NE OL PR PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.time%s	s-bbtime.adb		s-bbtime.ali
+
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+X 1 system.ads
+45K9*System 168e11 3|41r6 43r9 51r34 59r6 60r8 65r34 71r5
+X 2 s-bb.ads
+40K16*BB 1|45k9 2|95e14 3|41r13 43r16 51r41 59r13 60r15 65r41 71r12
+X 3 s-bbdead.ads
+43K19*Deadlines 2|40k16 3|59r16 60r18 71l15 71e24
+51I12*Relative_Deadline{5|84I9} 54r41 55r6 59r26 60r28
+54i4*Default_Relative_Deadline{51I12}
+58i4*Unspecified_Relative_Deadline{51I12}
+65M12*Absolute_Deadline{5|46M9} 68r41 69r6
+68m4*Default_Absolute_Deadline{65M12}
+X 5 s-bbtime.ads
+43K19*Time 3|41w16 51r44 65r44 5|248e19
+46M9*Time 3|65r49
+84I9*Time_Span<long_long_integer> 3|51r49
+

@@ -1,0 +1,45 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.exn_int%b	s-exnint.adb		b602a99c NE OL PK
+W system%s		system.ads		system.ali
+
+U system.exn_int%s	s-exnint.ads		98fcac11 NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20220730104119 da70b04d system%s
+D s-exnint.ads		20180525200321 428c1c5c system.exn_int%s
+D s-exnint.adb		20180525200321 f48eb5c0 system.exn_int%b
+X 1 system.ads
+45K9*System 168e11 2|34r9 39r5 3|32r14 70r5
+X 2 s-exnint.ads
+34K16*Exn_Int 1|45k9 2|39l12 39e19 3|32b21 70l12 70t19
+37V13*Exn_Integer{integer} 37>26 37>42 3|38b13 68l8 68t19
+37i26 Left{integer} 3|38b26 43r27
+37i42 Right{natural} 3|38b42 44r27
+X 3 s-exnint.adb
+42i7 Result{integer} 58m16 58r26 67r14
+43i7 Factor{integer} 58r35 63m13 63r23 63r32
+44i7 Exp{natural} 55r10 57r16 61m13 61r20 62r23
+

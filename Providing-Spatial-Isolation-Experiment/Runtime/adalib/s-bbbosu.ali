@@ -1,0 +1,194 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+
+U system.bb.board_support%b  s-bbbosu.adb	5c5f293a NE OL PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.cpu_primitives%s  s-bbcppr.adb	s-bbcppr.ali
+W system.bb.cpu_primitives.multiprocessors%s  s-bcprmu.adb  s-bcprmu.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+
+U system.bb.board_support%s  s-bbbosu.ads	5cea6f09 BN NE OL PR PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.interrupts%s  s-bbinte.adb		s-bbinte.ali
+W system.bb.time%s	s-bbtime.adb		s-bbtime.ali
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbbosu.adb		20220730104119 f9473d13 system.bb.board_support%b
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bcprmu.ads		20180525200322 26f8acf6 system.bb.cpu_primitives.multiprocessors%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbinte.adb		20220730104119 44108699 system.bb.interrupts%b
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbthre.ads		20220730104119 eed1e84f system.bb.threads%s
+D s-bbthqu.ads		20220730104119 98733e50 system.bb.threads.queues%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-maccod.ads		20180525200321 6d68a701 system.machine_code%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+X 1 interfac.ads
+38K9*Interfaces 184e15 6|37w6 37r22
+74M9*Unsigned_32 6|63r36 65r36 67r36 69r36 71r36 73r36 119r13 121r13 123r13
+. 125r13 127r14 129r13 131r32 133r32 137r33 139r32 246r24 246r39 247r24 248r17
+. 277r16 278r16 279r16 326r22 327r25 380r20 398r17 407r29 414r27 432r29 433r14
+. 436r26 464r45
+77M9*Unsigned_64 6|248r43
+145V13*Shift_Right{77M9} 6|248s30
+X 3 system.ads
+45K9*System 168e11 5|43r6 44r6 45r6 47r9 87r22 88r16 93r22 131r38 135r35
+. 139r36 145r5 6|38r6 39r6 41r14 368r22 369r16 388r14 395r11 396r11 399r43
+. 513r10 517r5
+75M9*Address 6|399r43
+118I12*Any_Priority{integer} 5|88r23 6|115r43 369r23
+120I12*Interrupt_Priority{118I12} 5|94r22 6|96r19 99r22 103r42 110r42 113r17
+. 115r17 164r29 167r30 357r22 491r50
+X 4 s-bb.ads
+40K16*BB 3|45k9 4|95e14 5|44r13 45r13 47r16 63r34 68r36 87r29 93r29 145r12
+. 6|39r13 41r21 42r8 135r20 236r37 243r36 245r14 250r21 275r34 276r14 293r18
+. 293r49 303r10 356r22 368r29 404r43 490r10 507r43 513r17 517r12
+X 5 s-bbbosu.ads
+47K19*Board_Support 4|40k16 5|145l15 145e28 6|41b24 517l15 517t28
+54U14*Initialize_Board 6|174b14 232l8 232t24
+62K12*Time 79l8 79e12 6|234b17 318l8 318t12
+63V16*Read_Clock{16|46M9} 6|275b16 294l11 294t21
+68U17*Set_Alarm 68>28 6|243b17 269l11 269t20
+68m28 Ticks{16|46M9} 6|243b28 246r52 248r56 250r13
+73U17*Install_Alarm_Handler 73>40 6|300b17 307l11 307t32
+73p40 Handler{11|57P9} 6|300b40 304r13
+76U17*Clear_Alarm_Interrupt 77r22 6|251s13 313b17 317l11 317t32
+85K12*Interrupts 124l8 124e18 6|306r13 350b17 392l8 392t18
+86V16*Priority_Of_Interrupt{3|118I12} 87>10 89r22 6|306s24 367b16 372l11
+. 372t32
+87i10 Interrupt{11|48I12} 6|368b10 371r38
+92U17*Install_Interrupt_Handler 93>10 94>10 6|355b17 361l11 361t36
+93i10 Interrupt{11|48I12} 6|356b10 359r18 360r19 360r43
+94i10 Prio{3|120I12} 6|357b10 359r40
+109U17*Set_Current_Priority 109>39 110r22 6|378b17 381l11 381t31
+109i39 Priority{integer} 6|378b39 380r41
+120U17*Power_Down 121r22 6|387b17 391l11 391t21
+126K12*Multiprocessors 144l8 144e23 6|394b17 515l8 515t23
+131V16*Number_Of_CPUs{18|23I12} 132r22 6|421b16 426l11 426t25
+135V16*Current_CPU{18|23I12} 136r22 6|445b16
+139U17*Poke_CPU 139>27 6|455b17 465l11 465t19
+139i27 CPU_Id{18|23I12} 6|455b27 464r30
+142U17*Start_All_CPUs 6|488b17 501l11 501t25
+X 6 s-bbbosu.adb
+44U14 IRQ_Handler 45r24 324b14 338l8 338t19
+47U14 FIQ_Handler 48r24 344b14 348l8 348t19
+51U14 Initialize_CPU_Devices 52i<c,__gnat_initialize_cpu_devices>22 146b14
+. 168l8 168t30 231s7
+55N4 MPCore_Base 61r36 120r42 122r42 124r42 126r42 128r42 130r42 132r42 134r42
+. 136r40 138r40 140r40
+61N4 Global_Timer_Base 64r40 66r40 68r40 70r40 72r40 74r40
+63m4 Global_Timer_Counter0{1|74M9} 179m7 287r19
+65m4 Global_Timer_Counter1{1|74M9} 180m7 285r16 288r20
+67m4 Global_Timer_Control{1|74M9} 152m7 178m7 260m13 260r37 267m13 315m10
+69m4 Global_Timer_Interrupt_Status{1|74M9} 149m7 316m10
+71m4 Global_Timer_Comparator0{1|74M9} 263m13
+73m4 Global_Timer_Comparator1{1|74M9} 264m13
+80M9 PRI 88r41 94r41 99r17 103r30 110r30 135r51
+88V13 To_PRI{80M9} 88>21 89r19 94b13 101l8 101t14 164s21 167s22 359s32 380s33
+88i21 P{integer} 94b21 96r10 99r48
+103V13 To_Priority{3|120I12} 103>26 104r19 110b13 117l8 117t19 371s17
+103m26 P{80M9} 110b26 112r10 115r62
+119m4 ICCICR{1|74M9} 200m7
+121m4 ICCPMR{1|74M9} 194m7 380m10
+123m4 ICCBPR{1|74M9} 197m7
+125m4 ICCIAR{1|74M9} 326r37
+127m4 ICCEOIR{1|74M9} 337m7
+129m4 ICDDCR{1|74M9} 158m7
+131a4 ICDISER(1|74M9) 161m7 360m10
+133a4 ICDICER(1|74M9) 155m7 187m10 189m10 190m10
+135a4 ICDIPR(80M9) 164m7 167m7 359m10 371r30
+137a4 ICDIPTR(1|74M9) 214m7 215m7 216m7 217m7 218m7 219m7 220m7 221m7 222m7
+. 223m7 224m7 225m7 226m7 227m7 228m7 229m7
+139a4 ICDICFR(1|74M9) 205m7 207m7 209m7 211m7
+236i7 Alarm_Interrupt_ID{11|48I12} 305r13 306r47
+246m10 Lo{1|74M9} 263r41
+247m10 Hi{1|74M9} 264r41
+277m10 Lo{1|74M9} 287m13 293r63
+278m10 Hi{1|74M9} 285m10 289r23 290m13 293r32
+279m10 Hi1{1|74M9} 288m13 289r28 290r19
+326m7 Iar{1|74M9} 327r40 337r18
+327m7 Int_Id{1|74M9} 329r10 334r40
+398m7 ICDSGIR{1|74M9} 463m10
+401i7 Poke_Interrupt{11|48I12} 464r58 491r34 511r37
+404U17 Poke_Handler 404>31 491r13 507b17 514l11 514t23
+404i31 Interrupt{11|48I12} 507b31 511r25
+407V16 MPIDR{1|74M9} 432b16 439l11 439t16 449s45
+410U17 Start_CPU 410>28 471b17 482l11 482t20 497s13
+410i28 CPU_Id{18|23I12} 471b28 478r13
+414m7 SCU_Configuration{1|74M9} 424r29
+422i10 NCPUs{18|23I12} 424m10 425r17
+433m10 R{1|74M9} 436m56 436r56 438r17
+472U20*Kick_Cpu1 473b<c,__kick_cpu1>28 479s13
+496i14 CPU_Id<short_short_integer> 497r24
+X 7 s-bbcppr.ads
+46K19*CPU_Primitives 6|39r16 513r20 7|96e29
+X 8 s-bcprmu.ads
+31K34*Multiprocessors 6|39w31 513r35 8|41e45
+34U14*Poke_Handler 6|513s51
+37U14*Start_All_CPUs 38i<c,__gnat_start_slave_cpus>22
+X 11 s-bbinte.ads
+45K19*Interrupts 5|44w16 73r50 87r32 93r32 6|42r11 135r23 236r40 303r13 356r25
+. 368r32 404r46 490r13 507r46 11|92e25
+48I12*Interrupt_ID{13|63I12} 5|87r43 93r43 6|135r34 236r51 334r26 356r36
+. 368r43 401r33 404r57 507r57
+57P9*Interrupt_Handler 5|73r61 6|300r50
+64U14*Interrupt_Wrapper 6|334s7
+69U14*Attach_Handler 6|303s24 490s24
+X 13 s-bbpara.ads
+63I12*Interrupt_Range{natural}
+X 16 s-bbtime.ads
+43K19*Time 5|45w16 63r37 68r39 6|243r39 245r17 250r24 275r37 276r17 293r21
+. 293r52 16|248e19
+46M9*Time 5|63r42 68r44 6|243r44 250r29 275r42 293r26 293r57
+X 17 s-maccod.ads
+36K16*Machine_Code 6|38w13 388r21 395r18 17|131e24
+45I9*Asm_Output_Operand<integer>
+83U14*Asm 6|390s10 435s10
+85i6 Outputs{45I9} 6|436r15
+88b6 Volatile{boolean} 6|390r22 437r15
+X 18 s-multip.ads
+18K16*Multiprocessors 5|43w13 131r45 135r42 139r43 6|396r18 18|31e27
+21I9*CPU_Range<short_short_integer>
+23I12*CPU{21I9} 5|131r61 135r58 139r59 6|410r37 421r38 422r18 424r19 445r35
+. 449r14 449r39 455r36 471r37 496r24 496r41
+

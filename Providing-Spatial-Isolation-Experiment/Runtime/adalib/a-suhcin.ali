@@ -1,0 +1,93 @@
+V "GNAT Lib v2018"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/cortex-ar/zynq7000/ravenscar-full/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -fomit-frame-pointer
+P DB SS ZX
+
+RN
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U ada.strings.unbounded.hash_case_insensitive%b  a-suhcin.adb  59e971b9 NE OL PR SU
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.hash_case_insensitive%s  a-shcain.adb  a-shcain.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.strings.unbounded.aux%s  a-stunau.adb	a-stunau.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+
+U ada.strings.unbounded.hash_case_insensitive%s  a-suhcin.ads  e010c3fe NE OL PR SU
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-charac.ads		20180525200321 2d3ec45b ada.characters%s
+D a-chlat1.ads		20180525200321 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20180525200321 61e5e089 ada.containers%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-finali.ads		20180525200321 bf4f806b ada.finalization%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-string.ads		20180525200321 90ac6797 ada.strings%s
+D a-shcain.ads		20180525200321 08af52df ada.strings.hash_case_insensitive%s
+D a-strmap.ads		20180525200321 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20180525200321 fe8d9a91 ada.strings.unbounded%s
+D a-stunau.ads		20180525200321 63b8e84c ada.strings.unbounded.aux%s
+D a-stunau.adb		20180525200321 6dfa01e7 ada.strings.unbounded.aux%b
+D a-suhcin.ads		20180525200321 7f78b9e6 ada.strings.unbounded.hash_case_insensitive%s
+D a-suhcin.adb		20180525200321 4d8672cc ada.strings.unbounded.hash_case_insensitive%b
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D system.ads		20220730104119 da70b04d system%s
+D s-finmas.ads		20180525200321 7811a767 system.finalization_masters%s
+D s-finroo.ads		20180525200321 4ff27390 system.finalization_root%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20180525200321 b16154c2 system.storage_pools%s
+D s-stposu.ads		20180525200321 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20180525200321 aedef97e system.stream_attributes%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+X 1 ada.ads
+16K9*Ada 20e8 14|34r6 36r10 40r22 15|30r6 31r6 33r10 42r11 43r5
+X 4 a-contai.ads
+16K13*Containers 24e19 14|34w10 38r10 15|35r10
+19M9*Hash_Type 14|38r21 15|35r21
+X 8 a-string.ads
+16K13*Strings 35e16 14|36r14 40r26 15|30r10 31r10 33r14 42r15 43r9
+X 9 a-shcain.ads
+32V22*Hash_Case_Insensitive{4|19M9} 15|31w18 42s23
+X 11 a-strunb.ads
+39K21*Unbounded 437e26 14|36r22 37r10 40r34 15|30r18 33r22 34r10 43r17
+42R9*Unbounded_String<6|43R9> 404e14 14|37r20 15|34r20
+X 12 a-stunau.ads
+37K31*Aux 77e30 15|30w28 37r8 41r4
+40A12*Big_String{string}<integer>
+47P9*Big_String_Access(40A12) 15|37r12
+54U14*Get_String 15|41s8
+X 14 a-suhcin.ads
+36V32*Hash_Case_Insensitive{4|19M9} 11|39k21 14|37>4 40r44 15|33b32 43l27
+. 43t48
+37r4 Key{11|42R9} 15|34b4 41r20
+X 15 a-suhcin.adb
+37p4 S{12|47P9} 41m25 41r25 42r46
+38i4 L{natural} 41m28 42r54
+
