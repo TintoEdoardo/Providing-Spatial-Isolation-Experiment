@@ -3,7 +3,7 @@ REQUIREMENTS and NOTES:
 2. Grant user access to /dev/ttyUSB1. 
 3. The compiler toolchain used for Ada is the 2021 version. 
 4. To run the experiment, gprbuild (version 2021) must be accessible. 
-5. Python3 has been used, with the following dependencies: shutil, os, serial, re, matplotlib.pyplot. 
+5. Python3 has been used, with the following dependencies: shutil, os, serial, re, matplotlib.pyplot, statistics. 
 
 INSTRUCTIONS: 
 1. Plug in the development unit. 
