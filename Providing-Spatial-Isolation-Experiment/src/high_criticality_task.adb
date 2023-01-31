@@ -8,6 +8,7 @@
 
 with Ada.Real_Time; use Ada.Real_Time;
 with Ada.Synchronous_Task_Control;
+with Ada.Text_IO;
 with Activation_Manager;
 with Experiment_Parameters;
 with High_Criticality_Task_Workload;
@@ -46,7 +47,13 @@ package body High_Criticality_Task is
          --  Task workload
          if (Iteration_Counter <= Iteration_Limit) then
             
-            High_Criticality_Task_Workload.Workload_1;
+            if (Experiment_Parameters.Workload_Type = 1) then
+               High_Criticality_Task_Workload.Workload_1;
+            elsif (Experiment_Parameters.Workload_Type = 2) then
+               High_Criticality_Task_Workload.Workload_2;
+            else
+               Ada.Text_IO.Put_Line ("Unexpected workload received");
+            end if;
             
             Iteration_Counter := Iteration_Counter + 1;
          end if;

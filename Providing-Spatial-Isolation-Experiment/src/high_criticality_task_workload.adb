@@ -61,9 +61,7 @@ package body High_Criticality_Task_Workload is
    begin
       --  The task initializes the message
       Timing_Event_1 := Ada.Real_Time.Clock;
-      for i in 1 .. Experiment_Parameters.Payload_Size loop
-         Message.Payload (i) := Integer_32_b (i);
-      end loop;
+      Message.Payload (1) := Integer_32_b (1);
       Timing_Event_2 := Ada.Real_Time.Clock;
       
       --  Compute and print the initialization time span

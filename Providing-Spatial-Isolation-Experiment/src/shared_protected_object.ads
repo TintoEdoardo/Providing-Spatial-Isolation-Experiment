@@ -6,7 +6,6 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-pragma Profile(Ravenscar);
 with Experiment_Parameters;
 
 package Shared_Protected_Object is

@@ -11,6 +11,8 @@ package Experiment_Parameters is
    Payload_Size    : Positive := 10;
    Iteration_Limit : Positive := 1000;
 
+   Workload_Type   : Positive := 1;
+
    --  The two tasks, at different criticality levels, exchange
    --  an object in form of a message through a channel, or a
    --  cross-criticality protected object.
@@ -24,6 +26,5 @@ package Experiment_Parameters is
    type Shared_Object is tagged record
      Payload : Array_of_I32b;
    end record;
-
 
 end Experiment_Parameters;

@@ -8,6 +8,7 @@
 
 with Ada.Real_Time; use Ada.Real_Time;
 with Ada.Synchronous_Task_Control;
+with Ada.Text_IO;
 with Activation_Manager;
 with Experiment_Parameters;
 with Low_Criticality_Task_Workload;
@@ -15,10 +16,6 @@ pragma Warnings (Off);
 with System.BB.Time;
 with System.Task_Primitives.Operations;
 pragma Warnings (On);
-
---  The following dependencies are used for measuring the 
---  experimental metrics
-with Ada.Text_IO;
 
 package body Low_Criticality_Task is
 
@@ -51,7 +48,13 @@ package body Low_Criticality_Task is
          --  Task workload
          if (Iteration_Counter <= Iteration_Limit) then
             
-            Low_Criticality_Task_Workload.Workload_1;
+            if (Experiment_Parameters.Workload_Type = 1) then
+               Low_Criticality_Task_Workload.Workload_1;
+            elsif (Experiment_Parameters.Workload_Type = 2) then
+               Low_Criticality_Task_Workload.Workload_2;
+            else
+               Ada.Text_IO.Put_Line ("Unexpected workload received");
+            end if;
             
             Iteration_Counter := Iteration_Counter + 1;
             
@@ -62,7 +65,7 @@ package body Low_Criticality_Task is
                --  time to complete successfully, hence before 
                --  setting the SO Experiment_Is_Completed, the
                --  task will suspend until next activation. 
-               Ada.Text_IO.Put ("<eof_tag/>");
+               Ada.Text_IO.Put ("<eof_tag></eof_tag>");
                delay until Next_Activation;
                
                --  Finally, the SO is set to True

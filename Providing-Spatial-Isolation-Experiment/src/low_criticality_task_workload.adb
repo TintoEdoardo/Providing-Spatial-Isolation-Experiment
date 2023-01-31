@@ -69,7 +69,7 @@ package body Low_Criticality_Task_Workload is
       
       --  Compute and print the receive time span
       Time_Span_of_Action := Timing_Event_2 - Timing_Event_1;
-      Ada.Text_IO.Put 
+      Ada.Text_IO.Put_Line 
         ("<receive>" &
            Duration'Image 
            (Ada.Real_Time.To_Duration (Time_Span_of_Action)) &
