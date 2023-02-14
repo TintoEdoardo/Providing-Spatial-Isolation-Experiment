@@ -11,7 +11,11 @@ package Experiment_Parameters is
    Payload_Size    : Positive := 10;
    Iteration_Limit : Positive := 1000;
 
-   Workload_Type   : Positive := 1;
+   Workload_Type   : Positive := 4;
+
+   --  Period is expressed in microseconds
+   Task_Period         : Positive := 100000;
+   Taskset_Cardinality : Positive := 10;
 
    --  The two tasks, at different criticality levels, exchange
    --  an object in form of a message through a channel, or a

@@ -6,84 +6,172 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Channel_High_to_Low;
+with Channels;
 with Shared_Protected_Object;
+with Workload_Utilities; use Workload_Utilities;
 with Experiment_Parameters; use Experiment_Parameters;
 with Ada.Real_Time; use Ada.Real_Time;
+
+--  DEBUG
 with Ada.Text_IO;
 
 package body High_Criticality_Task_Workload is
 
-   procedure Workload_1 is
-      Message_Reference   : Channel_High_to_Low.CPSP.Reference_Type;
+   procedure Workload_1_1 is
+      Message_Reference   : Channels.CPSP.Reference_Type;
       Timing_Event_1      : Ada.Real_Time.Time;
       Timing_Event_2      : Ada.Real_Time.Time;
-      Time_Span_of_Action : Ada.Real_Time.Time_Span;
    begin
+
       --  The task allocates a new message object
       pragma Assert (Message_Reference.Is_Null = True);
       Timing_Event_1 := Ada.Real_Time.Clock;
       Message_Reference.Allocate;
       Timing_Event_2 := Ada.Real_Time.Clock;
-      
-      --  Compute and print the allocation time span
-      Time_Span_of_Action := Timing_Event_2 - Timing_Event_1;
-      Ada.Text_IO.Put
-        ("<alloc>" &
-           Duration'Image 
-           (Ada.Real_Time.To_Duration (Time_Span_of_Action)) &
-           "</alloc>");
+
+      Print_Alloc (Timing_Event_1, Timing_Event_2);
       
       --  Operation on the acquired object
       Message_Reference.Element.Payload (1) := 0;
       pragma Assert (Message_Reference.Element.Payload (1) = 0);
       
-      --  The task send the message object over the channel
+      --  Send the message object over the channel
       Timing_Event_1 := Ada.Real_Time.Clock;
-      Channel_High_to_Low.High_to_Low_Channel.Send (Message_Reference);
+      Channels.High_to_Low_Channel.Send (Message_Reference);
+      Timing_Event_2 := Ada.Real_Time.Clock;
+      pragma Assert (Message_Reference.Is_Null = True);
+
+      Print_Send (Timing_Event_1, Timing_Event_2);
+      
+      --  DEBUG
+      Ada.Text_IO.Put_Line ("End of starter");
+
+   end Workload_1_1;
+   
+   procedure Workload_1_3 is
+      Message_Reference   : Channels.CPSP.Reference_Type;
+      Timing_Event_1      : Ada.Real_Time.Time;
+      Timing_Event_2      : Ada.Real_Time.Time;
+   begin
+
+      --  Acquire the message message
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Channels.Low_to_High_Channel.Receive
+        (Message_Reference);
+      Timing_Event_2 := Ada.Real_Time.Clock;
+      pragma Assert (Message_Reference.Is_Null = False);
+
+      Print_Receive (Timing_Event_1, Timing_Event_2);
+
+      --  Delete the message object
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Message_Reference.Free;
+      Timing_Event_2 := Ada.Real_Time.Clock;
+      pragma Assert (Message_Reference.Is_Null = True);
+      
+      Print_Free (Timing_Event_1, Timing_Event_2);
+      
+      --  Allocate a new message object
+      pragma Assert (Message_Reference.Is_Null = True);
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Message_Reference.Allocate;
+      Timing_Event_2 := Ada.Real_Time.Clock;
+
+      Print_Alloc (Timing_Event_1, Timing_Event_2);
+      
+      --  Send the message object over the channel
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Channels.High_to_Low_Channel.Send (Message_Reference);
       Timing_Event_2 := Ada.Real_Time.Clock;
       pragma Assert (Message_Reference.Is_Null = True);
       
       --  Compute and print the send time span
-      Time_Span_of_Action := Timing_Event_2 - Timing_Event_1;
-      Ada.Text_IO.Put 
-        ("<send>" &
-           Duration'Image 
-           (Ada.Real_Time.To_Duration (Time_Span_of_Action)) &
-           "</send>");
-   end Workload_1;
+      Print_Send (Timing_Event_1, Timing_Event_2);
+
+   end Workload_1_3;
    
-   procedure Workload_2 is
+   procedure Workload_2_1 is
+   begin
+      --  The behaviour is identical
+      Workload_1_1;
+   end Workload_2_1;
+   
+   procedure Workload_2_3 is
+      Message_Reference   : Channels.CPSP.Reference_Type;
+      Timing_Event_1      : Ada.Real_Time.Time;
+      Timing_Event_2      : Ada.Real_Time.Time;
+   begin
+
+      --  Acquire the message object
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Channels.Low_to_High_Channel.Receive
+        (Message_Reference);
+      Timing_Event_2 := Ada.Real_Time.Clock;
+      pragma Assert (Message_Reference.Is_Null = False);
+
+      Print_Receive (Timing_Event_1, Timing_Event_2);
+
+      --  Alter the message object
+      Message_Reference.Element.Payload (1) := 10;
+      pragma Assert (Message_Reference.Element.Payload (1) = 10);
+      
+      --  Send the message object over the channel
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Channels.High_to_Low_Channel.Send (Message_Reference);
+      Timing_Event_2 := Ada.Real_Time.Clock;
+      pragma Assert (Message_Reference.Is_Null = True);
+      
+      --  Compute and print the send time span
+      Print_Send (Timing_Event_1, Timing_Event_2);
+
+   end Workload_2_3;
+   
+   procedure Workload_3_1 is
       Message             : Experiment_Parameters.Shared_Object;
       Timing_Event_1      : Ada.Real_Time.Time;
       Timing_Event_2      : Ada.Real_Time.Time;
-      Time_Span_of_Action : Ada.Real_Time.Time_Span;
    begin
-      --  The task initializes the message
+      
+      --  Initialize the message
       Timing_Event_1 := Ada.Real_Time.Clock;
       Message.Payload (1) := Integer_32_b (1);
       Timing_Event_2 := Ada.Real_Time.Clock;
       
-      --  Compute and print the initialization time span
-      Time_Span_of_Action := Timing_Event_2 - Timing_Event_1;
-      Ada.Text_IO.Put
-        ("<init>" &
-           Duration'Image 
-           (Ada.Real_Time.To_Duration (Time_Span_of_Action)) &
-           "</init>");
+      Print_Initialize (Timing_Event_1, Timing_Event_2);
       
       --  Send the message through the protected object
       Timing_Event_1 := Ada.Real_Time.Clock;
       Shared_Protected_Object.Send (Message);
       Timing_Event_2 := Ada.Real_Time.Clock;
+
+      Print_Send (Timing_Event_1, Timing_Event_2);
+      
+   end Workload_3_1;
+
+   procedure Workload_3_3 is
+      Message             : Experiment_Parameters.Shared_Object;
+      Timing_Event_1      : Ada.Real_Time.Time;
+      Timing_Event_2      : Ada.Real_Time.Time;
+   begin
+
+      --  Acquire the message object
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Shared_Protected_Object.Receive (Message);
+      Timing_Event_2 := Ada.Real_Time.Clock;
+
+      Print_Receive (Timing_Event_1, Timing_Event_2);
+
+      --  Alter the message object
+      Message.Payload (1) := 30;
+      
+      --  Send the message object over the PO
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Shared_Protected_Object.Send (Message);
+      Timing_Event_2 := Ada.Real_Time.Clock;
       
       --  Compute and print the send time span
-      Time_Span_of_Action := Timing_Event_2 - Timing_Event_1;
-      Ada.Text_IO.Put 
-        ("<send>" &
-           Duration'Image 
-           (Ada.Real_Time.To_Duration (Time_Span_of_Action)) &
-           "</send>");
-      
-   end Workload_2;
+      Print_Send (Timing_Event_1, Timing_Event_2);
+
+   end Workload_3_3;
+   
 end High_Criticality_Task_Workload;

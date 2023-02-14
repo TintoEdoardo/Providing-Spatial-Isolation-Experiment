@@ -7,7 +7,6 @@
 ------------------------------------------------------------------------------
 
 with Ada.Real_Time; use Ada.Real_Time;
-with Ada.Synchronous_Task_Control;
 with Ada.Text_IO;
 with Activation_Manager;
 with Experiment_Parameters;
@@ -23,9 +22,11 @@ package body Low_Criticality_Task is
       Next_Activation     : Ada.Real_Time.Time;
       Task_Period         : constant Ada.Real_Time.Time_Span 
         := Ada.Real_Time.Microseconds (Period);
-      Iteration_Counter   : Positive;
-      Iteration_Limit     : Positive;
+      Task_Delay          : constant Ada.Real_Time.Time_Span 
+        := Ada.Real_Time.Microseconds
+          (Period / Experiment_Parameters.Taskset_Cardinality * Id);
    begin
+      
       System.Task_Primitives.Operations.Initialize_LO_Crit_Task
         (System.Task_Primitives.Operations.Self,
          Id,
@@ -36,47 +37,99 @@ package body Low_Criticality_Task is
          Reduced_Deadline,
          Is_Migrable);
       
+      --  DEBUG
+      Ada.Text_IO.Put_Line ("Before sync " & Id'Image);
       Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);
-      Iteration_Counter := 1;
-      Iteration_Limit   := Experiment_Parameters.Iteration_Limit;
+      Ada.Text_IO.Put_Line ("After sync " &Id'Image);
+
+      --  Initial delay, specific for each task
+      Next_Activation := Next_Activation + Task_Delay;
+      delay until Next_Activation;
+      
       loop
          --  Synchronization code
-         Ada.Synchronous_Task_Control.Suspend_Until_True
-           (Activation_Manager.Could_Receive);
          Next_Activation := Next_Activation + Task_Period;
          
+         --  DEBUG
+         Ada.Text_IO.Put_Line ("Task " & Id'Image & " => ");
+         
          --  Task workload
-         if (Iteration_Counter <= Iteration_Limit) then
+         if (Experiment_Parameters.Workload_Type = 1) then
+            Low_Criticality_Task_Workload.Workload_1_2;
             
-            if (Experiment_Parameters.Workload_Type = 1) then
-               Low_Criticality_Task_Workload.Workload_1;
-            elsif (Experiment_Parameters.Workload_Type = 2) then
-               Low_Criticality_Task_Workload.Workload_2;
-            else
-               Ada.Text_IO.Put_Line ("Unexpected workload received");
-            end if;
-            
-            Iteration_Counter := Iteration_Counter + 1;
-            
-            -- Insert eof and notify the end of the experiment
-            if (Iteration_Counter = Iteration_Limit + 1) then
-               
-               --  Noticeably, the Put operation requires some
-               --  time to complete successfully, hence before 
-               --  setting the SO Experiment_Is_Completed, the
-               --  task will suspend until next activation. 
-               Ada.Text_IO.Put ("<eof_tag></eof_tag>");
-               delay until Next_Activation;
-               
-               --  Finally, the SO is set to True
-               Ada.Synchronous_Task_Control.Set_True
-                 (Activation_Manager.Experiment_Is_Completed);
-            end if;
-            
+         elsif (Experiment_Parameters.Workload_Type = 2) then
+            Low_Criticality_Task_Workload.Workload_2_2;
+         
+         elsif (Experiment_Parameters.Workload_Type = 3) then
+            Low_Criticality_Task_Workload.Workload_3_2;
+         
+         else
+            Ada.Text_IO.Put_Line ("Unexpected workload received");
          end if;
          
          delay until Next_Activation;
+
       end loop;
+
    end Low_Criticality_Task;
+   
+   task body Low_Criticality_Task_Stopper is
+      Next_Activation     : Ada.Real_Time.Time;
+      Task_Period         : constant Ada.Real_Time.Time_Span 
+        := Ada.Real_Time.Microseconds (Period);
+      Task_Delay          : constant Ada.Real_Time.Time_Span 
+        := Ada.Real_Time.Microseconds
+          (Period / Experiment_Parameters.Taskset_Cardinality * Id);
+   begin
+      
+      System.Task_Primitives.Operations.Initialize_LO_Crit_Task
+        (System.Task_Primitives.Operations.Self,
+         Id,
+         Hosting_Migrating_Tasks_Priority,
+         On_Target_Core_Priority,
+         System.BB.Time.Milliseconds (Low_Critical_Budget),
+         Period,
+         Reduced_Deadline,
+         Is_Migrable);
+      
+      --  DEBUG
+      Ada.Text_IO.Put_Line ("Before sync " & Id'Image);
+      Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);
+      Ada.Text_IO.Put_Line ("After sync " &Id'Image);
+
+      --  Initial delay, specific for each task
+      Next_Activation := Next_Activation + Task_Delay;
+      delay until Next_Activation;
+      
+      loop
+         --  Synchronization code
+         Next_Activation := Next_Activation + Task_Period;
+         
+         --  DEBUG
+         Ada.Text_IO.Put_Line ("Task " & Id'Image & " => ");
+         
+         --  Task workload
+         if (Experiment_Parameters.Workload_Type = 1) then
+            Low_Criticality_Task_Workload.Workload_1_4;
+            
+         elsif (Experiment_Parameters.Workload_Type = 2) then
+            Low_Criticality_Task_Workload.Workload_2_4;
+         
+         elsif (Experiment_Parameters.Workload_Type = 3) then
+            Low_Criticality_Task_Workload.Workload_3_4;
+         
+         else
+            Ada.Text_IO.Put_Line ("Unexpected workload received");
+         end if;
+         
+         --  DEBUG
+         Ada.Text_IO.Put_Line ("Before delay");
+         delay until Next_Activation;
+         --  DEBUG
+         Ada.Text_IO.Put_Line ("After delay");
+
+      end loop;
+
+   end Low_Criticality_Task_Stopper;
 
 end Low_Criticality_Task;
