@@ -8,10 +8,11 @@
 
 package Experiment_Parameters is
 
-   Payload_Size    : Positive := 10;
-   Iteration_Limit : Positive := 1000;
+   --  Payload_Size    : Positive := 5068;
+   Payload_Size    : Positive := 5070;
+   --  Iteration_Limit : Positive := 1000;
 
-   Workload_Type   : Positive := 4;
+   Workload_Type   : Positive := 3;
 
    --  Period is expressed in microseconds
    Task_Period         : Positive := 100000;

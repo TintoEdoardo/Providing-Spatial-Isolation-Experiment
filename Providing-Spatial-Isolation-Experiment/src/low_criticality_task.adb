@@ -37,10 +37,7 @@ package body Low_Criticality_Task is
          Reduced_Deadline,
          Is_Migrable);
       
-      --  DEBUG
-      Ada.Text_IO.Put_Line ("Before sync " & Id'Image);
       Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);
-      Ada.Text_IO.Put_Line ("After sync " &Id'Image);
 
       --  Initial delay, specific for each task
       Next_Activation := Next_Activation + Task_Delay;
@@ -49,9 +46,6 @@ package body Low_Criticality_Task is
       loop
          --  Synchronization code
          Next_Activation := Next_Activation + Task_Period;
-         
-         --  DEBUG
-         Ada.Text_IO.Put_Line ("Task " & Id'Image & " => ");
          
          --  Task workload
          if (Experiment_Parameters.Workload_Type = 1) then
@@ -92,10 +86,7 @@ package body Low_Criticality_Task is
          Reduced_Deadline,
          Is_Migrable);
       
-      --  DEBUG
-      Ada.Text_IO.Put_Line ("Before sync " & Id'Image);
       Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);
-      Ada.Text_IO.Put_Line ("After sync " &Id'Image);
 
       --  Initial delay, specific for each task
       Next_Activation := Next_Activation + Task_Delay;
@@ -104,9 +95,6 @@ package body Low_Criticality_Task is
       loop
          --  Synchronization code
          Next_Activation := Next_Activation + Task_Period;
-         
-         --  DEBUG
-         Ada.Text_IO.Put_Line ("Task " & Id'Image & " => ");
          
          --  Task workload
          if (Experiment_Parameters.Workload_Type = 1) then
@@ -122,11 +110,7 @@ package body Low_Criticality_Task is
             Ada.Text_IO.Put_Line ("Unexpected workload received");
          end if;
          
-         --  DEBUG
-         Ada.Text_IO.Put_Line ("Before delay");
          delay until Next_Activation;
-         --  DEBUG
-         Ada.Text_IO.Put_Line ("After delay");
 
       end loop;
 

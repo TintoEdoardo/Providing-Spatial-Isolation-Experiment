@@ -16,7 +16,6 @@ with System.BB.Time;
 with System.Task_Primitives.Operations;
 pragma Warnings (On);
 
-
 package body High_Criticality_Task is
    
    task body High_Criticality_Task_Starter is
@@ -32,19 +31,13 @@ package body High_Criticality_Task is
          System.BB.Time.Milliseconds (Low_Critical_Budget),
          System.BB.Time.Milliseconds (High_Critical_Budget),
          Period);
-      
-      --  DEBUG
-      Ada.Text_IO.Put_Line ("Before sync " & Id'Image);
+
       Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);
-      Ada.Text_IO.Put_Line ("After sync " & Id'Image);
       
       loop
          
          --  Synchronization code
          Next_Activation := Next_Activation + Task_Period;
-         
-         --  DEBUG
-         Ada.Text_IO.Put_Line ("Task " & Id'Image & " => ");
          
          --  Task workload
          if (Experiment_Parameters.Workload_Type = 1) then
@@ -61,9 +54,6 @@ package body High_Criticality_Task is
          end if;
          
          delay until Next_Activation;
-         
-          --  DEBUG
-         Ada.Text_IO.Put_Line ("Delay is over");
 
       end loop;
 
@@ -85,11 +75,8 @@ package body High_Criticality_Task is
          System.BB.Time.Milliseconds (Low_Critical_Budget),
          System.BB.Time.Milliseconds (High_Critical_Budget),
          Period);
-      
-      --  DEBUG
-      Ada.Text_IO.Put_Line ("Before sync " & Id'Image);
+  
       Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);
-      Ada.Text_IO.Put_Line ("After sync " &Id'Image);
 
       --  Initial delay, specific for each task
       Next_Activation := Next_Activation + Task_Delay;
@@ -98,9 +85,6 @@ package body High_Criticality_Task is
       loop
          --  Synchronization code
          Next_Activation := Next_Activation + Task_Period;
-         
-         --  DEBUG
-         Ada.Text_IO.Put_Line ("Task " & Id'Image & " => ");
          
          --  Task workload
          if (Experiment_Parameters.Workload_Type = 1) then

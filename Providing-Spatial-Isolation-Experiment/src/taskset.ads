@@ -14,9 +14,9 @@ package Taskset is
 
    --  High criticality tasks
    High_Crit_Task_0 : High_Criticality_Task.High_Criticality_Task_Starter 
-     (Id                               => 0, 
-      Priority                         => 2, 
-      Hosting_Migrating_Tasks_Priority => 2, 
+     (Id                               => 10, 
+      Priority                         => 1, 
+      Hosting_Migrating_Tasks_Priority => 1, 
       Low_Critical_Budget              => 10, 
       High_Critical_Budget             => 10, 
       Workload                         => Task_Period / Taskset_Cardinality, 
