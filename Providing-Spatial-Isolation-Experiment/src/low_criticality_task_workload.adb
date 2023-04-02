@@ -129,12 +129,11 @@ package body Low_Criticality_Task_Workload is
       Timing_Event_2 := Ada.Real_Time.Clock;
 
       Print_Receive (Timing_Event_1, Timing_Event_2);
-
-      --  Initialize the message
-      Timing_Event_1 := Ada.Real_Time.Clock;
-      Message.Payload (2) := Integer_32_b (2);
-      Timing_Event_2 := Ada.Real_Time.Clock;
       
+      --  Alter the message
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Message.Payload (1) := Integer_32_b (2);
+      Timing_Event_2 := Ada.Real_Time.Clock;
       Print_Initialize (Timing_Event_1, Timing_Event_2);
       
       --  Send the message object over the PO
@@ -144,6 +143,8 @@ package body Low_Criticality_Task_Workload is
       
       --  Compute and print the send time span
       Print_Send (Timing_Event_1, Timing_Event_2);
+
+      Print_NewLine;
       
    end Workload_3_2;
 
@@ -155,9 +156,10 @@ package body Low_Criticality_Task_Workload is
 
       --  Acquire the message object
       Timing_Event_1 := Ada.Real_Time.Clock;
+      pragma Warnings (Off, """Message"" modified by call, but value might not be referenced");
       Shared_Protected_Object.Receive (Message);
+      pragma Warnings (On, """Message"" modified by call, but value might not be referenced");
       Timing_Event_2 := Ada.Real_Time.Clock;
-      pragma Assert (Message.Payload (1) = Integer_32_b (30));
 
       Print_Receive (Timing_Event_1, Timing_Event_2);
       

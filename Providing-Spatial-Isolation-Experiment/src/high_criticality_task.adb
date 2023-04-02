@@ -28,8 +28,8 @@ package body High_Criticality_Task is
         (System.Task_Primitives.Operations.Self,
          Id, 
          Hosting_Migrating_Tasks_Priority,
-         System.BB.Time.Milliseconds (Low_Critical_Budget),
-         System.BB.Time.Milliseconds (High_Critical_Budget),
+         System.BB.Time.Microseconds (Low_Critical_Budget),
+         System.BB.Time.Microseconds (High_Critical_Budget),
          Period);
 
       Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);
@@ -72,8 +72,8 @@ package body High_Criticality_Task is
         (System.Task_Primitives.Operations.Self,
          Id, 
          Hosting_Migrating_Tasks_Priority,
-         System.BB.Time.Milliseconds (Low_Critical_Budget),
-         System.BB.Time.Milliseconds (High_Critical_Budget),
+         System.BB.Time.Microseconds (Low_Critical_Budget),
+         System.BB.Time.Microseconds (High_Critical_Budget),
          Period);
   
       Activation_Manager.Synchronize_Activation_Cyclic (Next_Activation);

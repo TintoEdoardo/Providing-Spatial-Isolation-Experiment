@@ -12,9 +12,6 @@ with Workload_Utilities; use Workload_Utilities;
 with Experiment_Parameters; use Experiment_Parameters;
 with Ada.Real_Time; use Ada.Real_Time;
 
---  DEBUG
-with Ada.Text_IO;
-
 package body High_Criticality_Task_Workload is
 
    procedure Workload_1_1 is
@@ -42,9 +39,6 @@ package body High_Criticality_Task_Workload is
       pragma Assert (Message_Reference.Is_Null = True);
 
       Print_Send (Timing_Event_1, Timing_Event_2);
-      
-      --  DEBUG
-      Ada.Text_IO.Put_Line ("End of starter");
 
    end Workload_1_1;
    
@@ -53,7 +47,7 @@ package body High_Criticality_Task_Workload is
       Timing_Event_1      : Ada.Real_Time.Time;
       Timing_Event_2      : Ada.Real_Time.Time;
    begin
-
+      
       --  Acquire the message message
       Timing_Event_1 := Ada.Real_Time.Clock;
       Channels.Low_to_High_Channel.Receive
@@ -146,6 +140,8 @@ package body High_Criticality_Task_Workload is
 
       Print_Send (Timing_Event_1, Timing_Event_2);
       
+      Print_NewLine;
+      
    end Workload_3_1;
 
    procedure Workload_3_3 is
@@ -153,16 +149,22 @@ package body High_Criticality_Task_Workload is
       Timing_Event_1      : Ada.Real_Time.Time;
       Timing_Event_2      : Ada.Real_Time.Time;
    begin
+  
+      --  Ada.Text_IO.Put_Line ("1");
 
       --  Acquire the message object
       Timing_Event_1 := Ada.Real_Time.Clock;
       Shared_Protected_Object.Receive (Message);
       Timing_Event_2 := Ada.Real_Time.Clock;
-
+      
       Print_Receive (Timing_Event_1, Timing_Event_2);
-
-      --  Alter the message object
-      Message.Payload (1) := 30;
+      
+      --  Alter the message
+      Timing_Event_1 := Ada.Real_Time.Clock;
+      Message.Payload (1) := Integer_32_b (3);
+      Timing_Event_2 := Ada.Real_Time.Clock;
+      
+      Print_Initialize (Timing_Event_1, Timing_Event_2);
       
       --  Send the message object over the PO
       Timing_Event_1 := Ada.Real_Time.Clock;
@@ -171,7 +173,7 @@ package body High_Criticality_Task_Workload is
       
       --  Compute and print the send time span
       Print_Send (Timing_Event_1, Timing_Event_2);
-
+      
    end Workload_3_3;
    
 end High_Criticality_Task_Workload;

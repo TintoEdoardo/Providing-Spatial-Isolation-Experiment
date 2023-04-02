@@ -32,7 +32,7 @@ package body Low_Criticality_Task is
          Id,
          Hosting_Migrating_Tasks_Priority,
          On_Target_Core_Priority,
-         System.BB.Time.Milliseconds (Low_Critical_Budget),
+         System.BB.Time.Microseconds (Low_Critical_Budget),
          Period,
          Reduced_Deadline,
          Is_Migrable);
@@ -44,6 +44,7 @@ package body Low_Criticality_Task is
       delay until Next_Activation;
       
       loop
+           
          --  Synchronization code
          Next_Activation := Next_Activation + Task_Period;
          
@@ -81,7 +82,7 @@ package body Low_Criticality_Task is
          Id,
          Hosting_Migrating_Tasks_Priority,
          On_Target_Core_Priority,
-         System.BB.Time.Milliseconds (Low_Critical_Budget),
+         System.BB.Time.Microseconds (Low_Critical_Budget),
          Period,
          Reduced_Deadline,
          Is_Migrable);
@@ -93,6 +94,7 @@ package body Low_Criticality_Task is
       delay until Next_Activation;
       
       loop
+         
          --  Synchronization code
          Next_Activation := Next_Activation + Task_Period;
          
