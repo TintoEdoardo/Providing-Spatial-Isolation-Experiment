@@ -1,6 +1,0 @@
-/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/workload_utilities.adb:12:4:Print_Newline	8	static
-/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/workload_utilities.adb:17:4:Print_Alloc	112	dynamic
-/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/workload_utilities.adb:31:4:Print_Free	112	dynamic
-/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/workload_utilities.adb:45:4:Print_Send	112	dynamic
-/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/workload_utilities.adb:59:4:Print_Receive	112	dynamic
-/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/workload_utilities.adb:73:4:Print_Initialize	112	dynamic
