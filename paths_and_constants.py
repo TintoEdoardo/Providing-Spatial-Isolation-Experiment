@@ -21,19 +21,21 @@ experiment_workload = {
 }
 
 payload_size        = {
-    experiment_id [0] : [10, 29136, 58262, 87388, 1165640, 145640, 174766, 203892, 233018, 262144],
-    experiment_id [1] : [10, 29136, 58262, 87388, 1165640, 145640, 174766, 203892, 233018, 262144],
+    experiment_id [0] : [10, 29136, 58262, 87388, 116564, 145640, 174766, 203892, 233018, 262144],
+    experiment_id [1] : [10, 29136, 58262, 87388, 116564, 145640, 174766, 203892, 233018, 262144],
     experiment_id [2] : [10, 563, 1116, 1670, 2223, 2776, 3330, 3883, 4436, 4990]
 }
 
 payload_len         = 10
-number_of_samples   = 100
+number_of_samples   = 1000
+samples_factor_1    = 1.5
+samples_factor_2    = 2.5
 src_folder_name     = "Providing-Spatial-Isolation-Experiment"
 project_file        = "providing_spatial_isolation_experiment.gpr"
 results_folder_name = "Results"
 data_folder_name    = "Data"
 
-task_period         = [10_000, 58_000, 106_000, 152_000, 200_000]
+task_period         = [152_000] # [10_000, 58_000, 106_000, 152_000, 200_000]
 
 metrics      = ["alloc", "free", "send", "receive"]
 metrics_name = {
@@ -43,6 +45,14 @@ metrics_name = {
     metrics [3] : "Receive times"
 }
 metrics_len  = len (metrics)
+
+metrics_po      = ["init", "send", "receive"]
+metrics_po_name = {
+    metrics_po [0] : "Initialization of the object",
+    metrics_po [1] : "Send times",
+    metrics_po [2] : "Receive times"
+}
+metrics_po_len  = len (metrics_po)
 
 """
     Paths

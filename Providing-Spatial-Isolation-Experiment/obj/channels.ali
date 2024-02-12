@@ -1,0 +1,127 @@
+V "GNAT Lib v2018"
+A -O0
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -g
+A -g
+A -gnatwa
+A -gnatQ
+A -fstack-usage
+P DB LC TF  SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U channels%b		channels.adb		4eed34b1 OO PF PK
+Z channel_pool_access%s	channel_pool_access.adb	channel_pool_access.ali  ED
+
+U channels%s		channels.ads		20437e78 EE OO PF PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W channel_pool_access%s	channel_pool_access.adb	channel_pool_access.ali
+W experiment_parameters%s  experiment_parameters.ads  experiment_parameters.ali
+Z system%s		system.ads		system.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.pool_size%s	s-poosiz.adb		s-poosiz.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-finali.ads		20180525200321 bf4f806b ada.finalization%s
+D a-reatim.ads		20180525200322 4c16970e ada.real_time%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20180525200321 eff36322 ada.unchecked_deallocation%s
+D channel_pool.ads	20230212145816 1b8f1cad channel_pool%s
+D channel_pool_access.ads  20230601141855 02b37bd8 channel_pool_access%s
+D channel_pool_access.adb  20230601142314 0fca3ac4 channel_pool_access%b
+D channel_pool_instances.ads  20230212163857 21711bcc channel_pool_instances%s
+D channels.ads		20230212164618 eb1ca55d channels%s
+D channels.adb		20230212164854 a5f191ec channels%b
+D experiment_parameters.ads  20230622161632 c9eca0fd experiment_parameters%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbthre.ads		20230508131109 21d8a5a5 system.bb.threads%s
+D s-bbthqu.ads		20230317092049 98733e50 system.bb.threads.queues%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-finmas.ads		20180525200321 7811a767 system.finalization_masters%s
+D s-finroo.ads		20180525200321 4ff27390 system.finalization_root%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220730104119 55f7991a system.os_interface%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-pooglo.ads		20180525200321 ede33ef8 system.pool_global%s
+D s-poosiz.ads		20180525200321 9d8c569f system.pool_size%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20180525200321 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20180525200321 b16154c2 system.storage_pools%s
+D s-stposu.ads		20180525200321 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20180525200321 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20180525200322 801abd01 system.task_info%s
+D s-taspri.ads		20180525200322 351848fa system.task_primitives%s
+D s-taskin.ads		20220730104119 58b15916 system.tasking%s
+D s-taprob.ads		20180525200322 c8fc0753 system.tasking.protected_objects%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+X 10 channel_pool_access.ads
+17K9*Channel_Pool_Access 94e24 13|9w6 16r24
+32k12*Shared_Pointer 92e22 13|16r44
+46R12*Reference_Type<3|50R9> 13|20r50[16] 21r50[16] 25r50[16] 26r50[16] 14|14r47[13|16]
+. 19r50[13|16] 28r47[13|16] 33r50[13|16]
+57W22*Shared_Reference 14|12r29[13|16] 26r29[13|16]
+58U20 Send 14|16s25[13|16] 30s25[13|16]
+58r26 Reference{46R12[13|16]} 14|16r31[13|16] 30r31[13|16]
+59U20 Receive 14|21s25[13|16] 35s25[13|16]
+59r30 Reference{46R12[13|16]} 14|21r34[13|16] 35r34[13|16]
+X 13 channels.ads
+12K9*Channels 29l5 29e13 14|9b14 39l5 39t13
+16K12*CPSP[10|32] 20r45 21r45 25r45 26r45 14|12r24 14r42 19r45 26r24 28r42
+. 33r45
+19K12*High_to_Low_Channel 22l8 22e27 14|11b17 23l8 23t27
+20U17*Send 20=26 14|14b17 17l11 17t15
+20r26 Reference{10|46R12[16]} 14|14b23 16m44
+21U17*Receive 21=26 14|19b17 22l11 22t18
+21r26 Reference{10|46R12[16]} 14|19b26 21m47
+24K12*Low_to_High_Channel 27l8 27e27 14|25b17 37l8 37t27
+25U17*Send 25=26 14|28b17 31l11 31t15
+25r26 Reference{10|46R12[16]} 14|28b23 30m44
+26U17*Receive 26=26 14|33b17 36l11 36t18
+26r26 Reference{10|46R12[16]} 14|33b26 35m47
+X 14 channels.adb
+12w7 Shared_Message{10|57W22[13|16]} 16r10 21r10
+26w7 Shared_Message{10|57W22[13|16]} 30r10 35r10
+X 15 experiment_parameters.ads
+9K9*Experiment_Parameters 13|10w6 17r7 15|32e26
+28R9*Shared_Object 13|17r29 15|30e14
+X 38 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 47 s-taskin.ads
+407V13*Get_Sec_Stack{38|46P9} 408i<c,__gnat_get_secondary_stack>22
+

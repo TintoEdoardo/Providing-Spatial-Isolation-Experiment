@@ -14,7 +14,15 @@ def performTheExperiments ():
 
     for e_id in pc.experiment_id:
 
-        for p_size in pc.payload_size [e_id]:
+        #  Configure the multiplication factor for
+        #  the number of samples
+        if e_id in ["1_1", "1_2"]:
+            samples_factor = pc.samples_factor_1
+        else:
+            samples_factor = pc.samples_factor_2
+
+        #  for p_size in pc.payload_size [e_id]:
+        for p_size in [10]:
 
             for t_period in pc.task_period:
 
@@ -42,14 +50,20 @@ def performTheExperiments ():
                 #  Acquire the input from the application
                 input_lines = []
                 acquired_lines = 0
-                while acquired_lines < pc.number_of_samples:
+                while acquired_lines < pc.number_of_samples * samples_factor:
                     input_bytes = uart_interface.readline ()
 
                     if input_bytes.endswith (b'\n') :
                         # TODO perform more tests on the input bytes
-                        # 'utf-8' codec can't decode byte 0xfe in position 22: invalid start byte
-                        input_lines.append (input_bytes.decode ())
-                        acquired_lines += 1
+                        try:
+                            input_string = input_bytes.decode ()
+                        except UnicodeDecodeError:
+                            # 'utf-8' codec can't decode byte 0xfe in position 22: invalid start byte
+                            continue
+                        input_string = input_bytes.decode ()
+                        if input_string.startswith ("<alloc>"):
+                            input_lines.append (input_string)
+                            acquired_lines += 1
 
                 #  Write the input int the result file
                 result_file = open (path_to_results_file, 'w')

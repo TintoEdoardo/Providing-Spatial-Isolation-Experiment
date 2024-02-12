@@ -98,8 +98,8 @@ package body Low_Criticality_Task_Workload is
       Print_Receive (Timing_Event_1, Timing_Event_2);
       
       --  Alter the message object
-      Message_Reference.Element.Payload (1) := 10;
-      pragma Assert (Message_Reference.Element.Payload (1) = 10);
+      Channels.CPSP.Get (Message_Reference).Payload (1) := 10;
+      pragma Assert (Channels.CPSP.Get (Message_Reference).Payload (1) = 10);
       
       --  Send the message object over the channel
       Timing_Event_1 := Ada.Real_Time.Clock;

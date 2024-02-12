@@ -1,0 +1,111 @@
+V "GNAT Lib v2018"
+A -O0
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -g
+A -g
+A -gnatwa
+A -gnatQ
+A -fstack-usage
+P DB LC TF  SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_PROTECTED_ENTRIES=1
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U shared_protected_object%b  shared_protected_object.adb  217b8fc4 NE OO PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+
+U shared_protected_object%s  shared_protected_object.ads  1d66baa5 EE OO PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W experiment_parameters%s  experiment_parameters.ads  experiment_parameters.ali
+Z system%s		system.ads		system.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D experiment_parameters.ads  20230622161632 c9eca0fd experiment_parameters%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D shared_protected_object.ads  20230226172430 d48a1a58 shared_protected_object%s
+D shared_protected_object.adb  20230317100831 f5f1959c shared_protected_object%b
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbthre.ads		20230508131109 21d8a5a5 system.bb.threads%s
+D s-bbthqu.ads		20230317092049 98733e50 system.bb.threads.queues%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220730104119 55f7991a system.os_interface%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-soflin.ads		20180525200321 09900c20 system.soft_links%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20180525200321 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20180525200322 801abd01 system.task_info%s
+D s-taspri.ads		20180525200322 351848fa system.task_primitives%s
+D s-taskin.ads		20220730104119 58b15916 system.tasking%s
+D s-taprob.ads		20180525200322 c8fc0753 system.tasking.protected_objects%s
+D s-tpoben.ads		20180525200322 8351b91e system.tasking.protected_objects.entries%s
+D s-tpobop.ads		20180525200322 1882ba41 system.tasking.protected_objects.operations%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+X 6 experiment_parameters.ads
+9K9*Experiment_Parameters 32e26 9|9w6 14r39 15r36 18r27 23r36 24r37 10|5r37
+. 11r36 19r34 24r37
+28R9*Shared_Object 30e14 9|14r61 15r58 18r49 23r58 24r59 10|5r59 11r58 19r56
+. 24r59
+X 9 shared_protected_object.ads
+11K9*Shared_Protected_Object 26l5 26e28 10|2b14 29l5 29t28
+13W19*Protected_Object 17E7 19l8 19e24 21r27 10|4b19 17l8 17t24
+14U17 Send 14>26 10|5b17 9l11 9t15 21s28
+14r26 Message{6|28R9} 10|5b23 8r30
+15Y13 Receive 15<22 10|11b13 16l11 16t18 26s28
+15r22 Message{6|28R9} 10|14m10
+17b7 Message_Available{boolean} 10|7r10 12r12 15r10
+18r7 Internal_Message{6|28R9} 10|8r10 14r21
+21w4*Cross_Criticality_PO{13W19} 10|21r7 26r7
+23U14*Send 23>23 10|19b14 22l8 22t12
+23r23 Message{6|28R9} 10|19b20 21r34
+24U14*Receive 24<23 10|24b14 27l8 27t15
+24r23 Message{6|28R9} 10|24b23 26m37
+X 10 shared_protected_object.adb
+11r22 Message{6|28R9}
+X 27 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 34 s-taskin.ads
+407V13*Get_Sec_Stack{27|46P9} 408i<c,__gnat_get_secondary_stack>22
+

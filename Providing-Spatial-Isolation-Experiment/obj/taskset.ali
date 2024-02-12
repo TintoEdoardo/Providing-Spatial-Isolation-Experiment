@@ -1,0 +1,109 @@
+V "GNAT Lib v2018"
+A -O0
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -g
+A -g
+A -gnatwa
+A -gnatQ
+A -fstack-usage
+P DB LC TF  ZX
+
+RN
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_TASKS=10
+
+U taskset%s		taskset.ads		53d16fa2 EE OO PK
+W experiment_parameters%s  experiment_parameters.ads  experiment_parameters.ali
+W high_criticality_task%s  high_criticality_task.adb  high_criticality_task.ali  AD
+W low_criticality_task%s  low_criticality_task.adb  low_criticality_task.ali  AD
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+T 10 10
+
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D experiment_parameters.ads  20230622161632 c9eca0fd experiment_parameters%s
+D high_criticality_task.ads  20230317092224 2a7f4648 high_criticality_task%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D low_criticality_task.ads  20230213143256 6ed4ef83 low_criticality_task%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbthre.ads		20230508131109 21d8a5a5 system.bb.threads%s
+D s-bbthqu.ads		20230317092049 98733e50 system.bb.threads.queues%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220730104119 55f7991a system.os_interface%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20180525200321 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20180525200322 801abd01 system.task_info%s
+D s-taspri.ads		20180525200322 351848fa system.task_primitives%s
+D s-taskin.ads		20220730104119 58b15916 system.tasking%s
+D s-tasres.ads		20180525200322 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20180525200322 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+D taskset.ads		20230224094136 de966694 taskset%s
+X 6 experiment_parameters.ads
+9K9*Experiment_Parameters 32e26 38|11w6 11r33
+15i4*Task_Period{positive} 38|20r43 21r43 22r43 23r43 24r43 32r43 33r43 34r43
+. 35r43 36r43 44r43 45r43 46r43 47r43 48r43 56r43 57r43 58r43 59r43 60r43
+. 68r43 69r43 70r43 71r43 72r43 82r44 84r44 85r44 86r44 94r44 96r44 97r44
+. 98r44 106r44 108r44 109r44 110r44 118r44 120r44 121r44 122r44 130r44 132r44
+. 133r44 134r44
+16i4*Taskset_Cardinality{positive} 38|20r57 21r57 22r57 32r57 33r57 34r57
+. 44r57 45r57 46r57 56r57 57r57 58r57 68r57 69r57 70r57 82r58 84r58 94r58
+. 96r58 106r58 108r58 118r58 120r58 130r58 132r58
+X 7 high_criticality_task.ads
+12K9*High_Criticality_Task 46e26 38|9w6 16r23 28r26 40r26 52r26 64r26
+14T14*High_Criticality_Task_Starter 28e37 38|16r45
+30T14*High_Criticality_Task 44e29 38|28r48 40r48 52r48 64r48
+X 9 low_criticality_task.ads
+12K9*Low_Criticality_Task 46e25 38|10w6 77r22 89r22 101r22 113r22 125r22
+14T14*Low_Criticality_Task 28e28 38|77r43 89r43 101r43 113r43
+30T14*Low_Criticality_Task_Stopper 44e36 38|125r43
+X 27 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 33 s-taskin.ads
+407V13*Get_Sec_Stack{27|46P9} 408i<c,__gnat_get_secondary_stack>22
+X 35 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+X 38 taskset.ads
+13K9*Taskset 137l5 137e12
+16t4*High_Crit_Task_0{7|14T14}
+28t7*High_Crit_Task_2{7|30T14}
+40t7*High_Crit_Task_4{7|30T14}
+52t7*High_Crit_Task_6{7|30T14}
+64t7*High_Crit_Task_8{7|30T14}
+77t4*Low_Crit_Task_1{9|14T14}
+89t4*Low_Crit_Task_3{9|14T14}
+101t4*Low_Crit_Task_5{9|14T14}
+113t4*Low_Crit_Task_7{9|14T14}
+125t4*Low_Crit_Task_9{9|30T14}
+

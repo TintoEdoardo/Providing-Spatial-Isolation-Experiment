@@ -1,0 +1,5 @@
+b__main.adb:50:4:tsec_default_sized_stacksbip	32	static
+b__main.adb:57:4:adafinal	8	static
+b__main.adb:73:4:adainit	8	static
+b__main.adb:258:4:main	24	static
+b__main.adb:9:1:ada_main	8	static

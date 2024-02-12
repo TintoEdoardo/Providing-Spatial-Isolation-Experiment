@@ -1,0 +1,191 @@
+V "GNAT Lib v2018"
+A -O0
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -g
+A -g
+A -gnatwa
+A -gnatQ
+A -fstack-usage
+P DB LC TF  ZX
+
+RN
+RV NO_DELAY
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV STATIC_PRIORITIES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U high_criticality_task%b  high_criticality_task.adb  78bc9e65 OO PK
+W activation_manager%s	activation_manager.adb	activation_manager.ali
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W experiment_parameters%s  experiment_parameters.ads  experiment_parameters.ali
+W high_criticality_task_workload%s  high_criticality_task_workload.adb  high_criticality_task_workload.ali
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.time%s	s-bbtime.adb		s-bbtime.ali
+W system.task_primitives%s  s-taspri.ads	s-taspri.ali
+W system.task_primitives.operations%s  s-taprop.adb  s-taprop.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+U high_criticality_task%s  high_criticality_task.ads  0331f830 EE NE OO PK
+W system%s		system.ads		system.ali
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+D activation_manager.ads  20230213175123 0950c73d activation_manager%s
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-reatim.ads		20180525200322 4c16970e ada.real_time%s
+D a-retide.ads		20180525200322 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20180525200321 119b8fb3 ada.streams%s
+D a-sytaco.ads		20180525200322 e57638e1 ada.synchronous_task_control%s
+D a-tags.ads		20180525200321 491b781d ada.tags%s
+D a-taside.ads		20180525200322 c3e0cda8 ada.task_identification%s
+D a-textio.ads		20180525200321 ffc84532 ada.text_io%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D experiment_parameters.ads  20230622161632 c9eca0fd experiment_parameters%s
+D high_criticality_task.ads  20230317092224 2a7f4648 high_criticality_task%s
+D high_criticality_task.adb  20230317100843 b50e0c76 high_criticality_task%b
+D high_criticality_task_workload.ads  20230212171355 66528fa0 high_criticality_task_workload%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbthre.ads		20230508131109 21d8a5a5 system.bb.threads%s
+D s-bbthqu.ads		20230317092049 98733e50 system.bb.threads.queues%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220730104119 55f7991a system.os_interface%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20180525200321 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20180525200322 801abd01 system.task_info%s
+D s-taspri.ads		20180525200322 351848fa system.task_primitives%s
+D s-taprop.ads		20220730104119 287989f9 system.task_primitives.operations%s
+D s-taskin.ads		20220730104119 58b15916 system.tasking%s
+D s-taprob.ads		20180525200322 c8fc0753 system.tasking.protected_objects%s
+D s-tposen.ads		20220730104119 828b4fcc system.tasking.protected_objects.single_entry%s
+D s-tasres.ads		20180525200322 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20180525200322 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180525200321 34867c83 system.unsigned_types%s
+X 1 activation_manager.ads
+12K9*Activation_Manager 24e23 14|11w6 35r7 79r7
+22U14*Synchronize_Activation_Cyclic 14|35s26 79s26
+X 2 ada.ads
+16K9*Ada 20e8 14|9r6 9r25 10r6 22r29 23r38 24r12 53r13 63r29 64r38 65r12
+. 66r38 67r12 100r13
+X 4 a-reatim.ads
+41K13*Real_Time 182e18 14|9w10 9r29 22r33 23r42 24r16 63r33 64r42 65r16 66r42
+. 67r16
+51M9*Time<28|46M9> 14|22r43 63r43
+61I9*Time_Span<28|84I9> 14|23r52 64r52 66r52
+72V14*"+"{51M9} 14|40s45 82s42 87s45
+126V13*Microseconds{61I9}<28|158p13> 14|24s26 65s26 67s26
+X 10 a-textio.ads
+36K13*Text_IO 52e16 14|10w10 53r17 100r17
+46U14*Put_Line 14|53s25 100s25
+X 12 experiment_parameters.ads
+9K9*Experiment_Parameters 32e26 14|12w6 43r14 46r17 49r17 68r21 90r14 93r17
+. 96r17
+12i4*Workload_Type{positive} 14|43r36 46r39 49r39 90r36 93r39 96r39
+16i4*Taskset_Cardinality{positive} 14|68r43
+X 13 high_criticality_task.ads
+12K9*High_Criticality_Task 46l5 46e26 14|19b14 109l5 109t26
+14T14*High_Criticality_Task_Starter 15d7 16d7 17d7 18d7 19d7 20d7 21d7 22d7
+. 23d7 24d7 28l8 28e37 14|21b14 60l8 60t37
+15i7 Id{natural} 14|29r10
+16i7 Priority{18|119I12} 26r24
+17i7 Hosting_Migrating_Tasks_Priority{integer} 14|30r10
+18i7 Low_Critical_Budget{natural} 14|31r39
+19i7 High_Critical_Budget{natural} 14|32r39
+20i7 Workload{positive}
+21i7 Period{positive} 14|24r40 33r10
+22i7 Reduced_Deadline{positive}
+23b7 Could_Exceed{boolean}
+24i7 CPU_Id{29|23I12} 27r19
+30T14*High_Criticality_Task 31d7 32d7 33d7 34d7 35d7 36d7 37d7 38d7 39d7
+. 40d7 44l8 44e29 14|62b14 107l8 107t29
+31i7 Id{natural} 14|68r65 73r10
+32i7 Priority{18|119I12} 42r24
+33i7 Hosting_Migrating_Tasks_Priority{integer} 14|74r10
+34i7 Low_Critical_Budget{natural} 14|75r39
+35i7 High_Critical_Budget{natural} 14|76r39
+36i7 Workload{positive}
+37i7 Period{positive} 14|65r40 68r12 77r10
+38i7 Reduced_Deadline{positive}
+39b7 Could_Exceed{boolean}
+40i7 CPU_Id{29|23I12} 43r19
+X 14 high_criticality_task.adb
+22m7 Next_Activation{4|51M9} 35m57 40m10 40r29 56r22
+23i7 Task_Period{4|61I9} 40r47
+63m7 Next_Activation{4|51M9} 79m57 82m7 82r26 83r19 87m10 87r29 103r22
+64i7 Task_Period{4|61I9} 87r47
+66i7 Task_Delay{4|61I9} 82r44
+X 15 high_criticality_task_workload.ads
+9K9*High_Criticality_Task_Workload 14|13w6 44r13 47r13 50r13 91r13 94r13
+. 97r13 15|28e35
+14U14*Workload_1_1 14|44s44
+15U14*Workload_1_3 14|91s44
+20U14*Workload_2_1 14|47s44
+21U14*Workload_2_3 14|94s44
+25U14*Workload_3_1 14|50s44
+26U14*Workload_3_3 14|97s44
+X 18 system.ads
+45K9*System 13|9w6 9r18 10r6 10r34 16r42 32r42 14|15r6 16r6 27r7 28r10 31r10
+. 32r10 71r7 72r10 75r10 76r10 18|168e11
+118I12*Any_Priority{integer}
+119I12*Priority{118I12} 13|16r49 32r49
+X 19 s-bb.ads
+40K16*BB 14|15r13 31r17 32r17 75r17 76r17 19|95e14
+X 28 s-bbtime.ads
+43K19*Time 14|15w16 31r20 32r20 75r20 76r20 28|248e19
+46M9*Time
+84I9*Time_Span<long_long_integer>
+158V13*Microseconds{84I9} 14|31s25 32s25 75s25 76s25
+X 29 s-multip.ads
+18K16*Multiprocessors 13|10w13 10r41 29|31e27
+21I9*CPU_Range<short_short_integer>
+23I12*CPU{21I9} 13|24r42 40r42
+X 34 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 39 s-taspri.ads
+40K16*Task_Primitives 14|16r13 27r14 28r17 71r14 72r17 39|82e27
+X 40 s-taprop.ads
+46K32*Operations 14|16w29 27r30 28r33 71r30 72r33 40|167e38
+78V13*Self{41|67P9} 14|28s44 72s44
+159U14*Initialize_HI_Crit_Task 14|27s41 71s41
+X 41 s-taskin.ads
+67P9*Task_Id(65R9)
+407V13*Get_Sec_Stack{34|46P9} 408i<c,__gnat_get_secondary_stack>22
+X 45 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+

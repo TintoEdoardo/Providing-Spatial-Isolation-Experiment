@@ -1,6 +1,4 @@
-import folder_setup_functions
-import launch_function
-import data_analysis_functions
+from Runtime_Cost_for_Message_Exchange_Release_3 import data_analysis_functions, folder_setup_functions, launch_function
 
 """
     STARTING POINT FOR THE EXPERIMENTS
@@ -9,20 +7,26 @@ import data_analysis_functions
 if __name__ == '__main__':
 
     #  Perform initial cleaning of the working directory
-    #  folder_setup_functions.clearGraphDirectory ()
-    #  folder_setup_functions.clearExperimentsDirectory ()
+    folder_setup_functions.clearGraphDirectory ()
+    folder_setup_functions.clearExperimentsDirectory ()
 
     #  Generate the test applications and compile them
-    #  folder_setup_functions.populateExperimentsDirectory ()
+    folder_setup_functions.populateExperimentsDirectory ()
 
     #  Run the experiments
-    #  launch_function.performTheExperiments ()
+    launch_function.performTheExperiments ()
 
     #  Extract the relevant metrics
-    # data_analysis_functions.extractMetrics ()
+    data_analysis_functions.extractMetrics ()
 
     #  Produce the plot diagrams
-    # data_analysis_functions.generatePlotDiagrams ()
+    data_analysis_functions.generateBoxDiagrams()
 
     #  Calculate the statistical significance
-    data_analysis_functions.computeStatisticalSignificance (0.5)
+    #  data_analysis_functions.computeStatisticalSignificance (0.5)
+    #  data_analysis_functions.computeStatisticalSignificance (0.05)
+    #  data_analysis_functions.computeStatisticalSignificance (0.005)
+
+    #  Produce the histograms of the statistical relevance
+    # data_analysis_functions.generateStatisticalSignificanceDiagram ()
+

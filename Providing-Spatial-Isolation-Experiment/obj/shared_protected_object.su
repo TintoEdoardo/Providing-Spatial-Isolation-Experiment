@@ -1,0 +1,11 @@
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.ads:13:4:Protected_Objectvip	56	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.ads:15:7:P2sip	16	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.adb:12:12:Receive_B7s	16	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.adb:5:7:Sendn	32	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.adb:5:7:Sendp	16	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.adb:5:7:Sendp	32	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.adb:11:7:Receive_E6s	64	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.ads:13:19:Protected_Objectf	16	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.adb:19:4:Send	16	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.adb:24:4:Receive	32	static
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/shared_protected_object.ads:11:1:Shared_Protected_Object	8	static

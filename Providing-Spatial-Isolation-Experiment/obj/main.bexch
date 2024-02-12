@@ -1,0 +1,29 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr
+20230317092608 ed9f061af52e35d5bb7a28873f4a1812
+[BOUND OBJECT FILES]
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/activation_manager.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/experiment_parameters.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/channels.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/shared_protected_object.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/workload_utilities.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/high_criticality_task_workload.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/high_criticality_task.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/low_criticality_task_workload.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/low_criticality_task.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/taskset.o
+/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/
+-L/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/obj/
+-L/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/adalib/
+-static
+-static-libgcc
+/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/adalib/libgnarl.a
+/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/adalib/libgnat.a

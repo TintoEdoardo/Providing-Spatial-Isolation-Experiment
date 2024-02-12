@@ -1,0 +1,103 @@
+V "GNAT Lib v2018"
+A -O0
+A -gnatA
+A --RTS=/home/edoardo/proj/Ada-RTE-supporting-semi-partitioned-model/runtime/arm-eabi/lib/gnat/ravenscar_full_zynq7000/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-a9
+A -mfpu=vfpv3
+A -marm
+A -mno-unaligned-access
+A -g
+A -g
+A -gnatwa
+A -gnatQ
+A -fstack-usage
+P DB LC TF  ZX
+
+RN
+RV NO_DELAY
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U activation_manager%b	activation_manager.adb	a3789500 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+
+U activation_manager%s	activation_manager.ads	a03068d2 EB EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.synchronous_task_control%s  a-sytaco.adb	a-sytaco.ali
+
+D activation_manager.ads  20230213175123 0950c73d activation_manager%s
+D activation_manager.adb  20230216081022 e63ec533 activation_manager%b
+D ada.ads		20180525200322 76789da1 ada%s
+D a-except.ads		20180525200321 291912d5 ada.exceptions%s
+D a-reatim.ads		20180525200322 4c16970e ada.real_time%s
+D a-retide.ads		20180525200322 081cdaa4 ada.real_time.delays%s
+D a-sytaco.ads		20180525200322 e57638e1 ada.synchronous_task_control%s
+D a-taside.ads		20180525200322 c3e0cda8 ada.task_identification%s
+D a-unccon.ads		20180525200322 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20180525200321 5ab55268 interfaces%s
+D mixed_criticality_system.ads  20220730104119 52c92f87 mixed_criticality_system%s
+D system.ads		20220730104119 da70b04d system%s
+D s-bb.ads		20180525200321 09e072ae system.bb%s
+D s-bbbosu.ads		20180525200322 b43d4db6 system.bb.board_support%s
+D s-bbcppr.ads		20220730104119 59b80593 system.bb.cpu_primitives%s
+D s-bbcpsp.ads		20220730104119 720822f6 system.bb.cpu_specific%s
+D s-bbdead.ads		20220730104119 deeac8df system.bb.deadlines%s
+D s-bbinte.ads		20180525200322 c88d39da system.bb.interrupts%s
+D s-bbpara.ads		20220730104119 460ec225 system.bb.parameters%s
+D s-bbthre.ads		20230508131109 21d8a5a5 system.bb.threads%s
+D s-bbthqu.ads		20230317092049 98733e50 system.bb.threads.queues%s
+D s-bbtime.ads		20220730104119 da8467fe system.bb.time%s
+D s-multip.ads		20180525200322 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20180525200322 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20180525200322 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220730104119 55f7991a system.os_interface%s
+D s-parame.ads		20180525200322 56d93bcb system.parameters%s
+D s-secsta.ads		20180525200321 56a2861c system.secondary_stack%s
+D s-stalib.ads		20180525200321 09bd3940 system.standard_library%s
+D s-stoele.ads		20220919145836 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20180525200322 801abd01 system.task_info%s
+D s-taspri.ads		20180525200322 351848fa system.task_primitives%s
+D s-taskin.ads		20220730104119 58b15916 system.tasking%s
+D s-taprob.ads		20180525200322 c8fc0753 system.tasking.protected_objects%s
+D s-tposen.ads		20220730104119 828b4fcc system.tasking.protected_objects.single_entry%s
+D s-traent.ads		20180525200321 005bf670 system.traceback_entries%s
+X 1 activation_manager.ads
+12K9*Activation_Manager 24l5 24e23 2|11b14 28l5 28t23
+15w4*Experiment_Is_Completed{7|46W9}
+17m4*System_Start_Time{5|51M9} 2|22m7 24r28
+18i4*Task_Start_Time{5|61I9} 2|23m7 24r48
+19i4*Relative_Offset{natural} 2|23r56
+20m4*Activation_Time{5|51M9} 2|16r15 17r19 24m7
+22U14*Synchronize_Activation_Cyclic 22<45 2|13b14 18l8 18t37
+22m45 Time{5|51M9} 2|14b7 16m7
+X 2 activation_manager.adb
+20U14 Initialize 20b14 25l8 25t18 27s4
+X 3 ada.ads
+16K9*Ada 1|9r6 10r6 10r40 17r24 18r24 20r24 22r56 2|9r6 9r25 14r18 22r28
+. 23r28 3|20e8
+X 5 a-reatim.ads
+41K13*Real_Time 1|9w10 17r28 18r28 20r28 22r60 2|9w10 9r29 14r22 22r32 23r32
+. 5|182e18
+51M9*Time<22|46M9> 1|17r38 20r38 22r70 2|14r32
+61I9*Time_Span<22|84I9> 1|18r38
+68V13*Clock{51M9}<22|187p13> 2|22s42
+72V14*"+"{51M9} 2|24s46
+128V13*Milliseconds{61I9}<22|159p13> 2|23s42
+X 7 a-sytaco.ads
+40K13*Synchronous_Task_Control 1|10w10 10r44 7|92e33
+46W9*Suspension_Object 1|15r30 7|90e25
+X 22 s-bbtime.ads
+46M9*Time
+84I9*Time_Span<long_long_integer>
+X 28 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 33 s-taskin.ads
+407V13*Get_Sec_Stack{28|46P9} 408i<c,__gnat_get_secondary_stack>22
+

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 6" >
+      <vfs_project />
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 22" >
+      <vfs_project />
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/channels.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/channels.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/low_criticality_task.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/low_criticality_task.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 74" line=" 40" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/low_criticality_task.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 17" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/low_criticality_task.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 22" >
+      <vfs_project />
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/experiment_parameters.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/channels.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/channels.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 30" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/channels.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/taskset.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/providing_spatial_isolation_experiment.gpr</vfs_project>
+      <vfs_file>/home/edoardo/proj/proj-releases/Providing-Spatial-Isolation-Experiment/Runtime_Cost_for_Message_Exchange_Copy/Providing-Spatial-Isolation-Experiment/src/experiment_parameters.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
